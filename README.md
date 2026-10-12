@@ -53,6 +53,12 @@ Existing files and the stock input are never overwritten. Use a local filesystem
 
 **Creating the file does not install it.** Device transfer is a separate, deliberate operation outside this patcher. Read the [validation and recovery limits](docs/VALIDATION.md) before deciding whether to install a generated image. Follow Elektron's documentation for your instrument and keep the official firmware available. No recovery procedure can be guaranteed by this project's local tests.
 
+## Developer hardware report
+
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues.
+
+This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable. See the [validation guide](docs/VALIDATION.md) for the distinction between this report and the recorded automated checks.
+
 ## Documentation
 
 - [Features, paths, track roles and performance controls](docs/FEATURES.md)

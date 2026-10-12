@@ -63,4 +63,4 @@ Enable **Perform Kit** with **FUNC + PRESET/KIT**, sculpt the sounds, then exit 
 
 ## Practical limits
 
-Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). Physical listening remains necessary to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.
+Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer reports thorough real-instrument testing and current operation without observed issues; see the provenance and limits in [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.

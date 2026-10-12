@@ -26,9 +26,15 @@ These summaries are historical evidence, not a claim that the private full emula
 
 ## Hardware evidence and limits
 
-The author previously installed an earlier modified build successfully and confirmed stock reinstallation through startup recovery on a healthy Digitone II. That experience does not establish that RC17 has undergone physical listening tests, or that recovery will succeed after every possible failure.
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. The report was supplied by the developer on **12 October 2026**. It is not an independently witnessed certification or an exhaustive test of every seed, configuration or instrument.
 
-RC17 validation used synthetic peripherals/DSP behavior and instruction compatibility shims. Physical audio, hardware timing, cache interactions and every possible seed remain unverified. Intel runtime operation and macOS 11 operation are also untested. The app is ad-hoc signed and not notarized.
+This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable.
+
+The author also previously confirmed stock reinstallation through startup recovery on a healthy Digitone II. That does not guarantee recovery after every possible failure.
+
+The recorded RC17 automated tests used synthetic peripherals/DSP behavior and instruction compatibility shims. Their JSON summaries describe those local development runs; fields such as `physical_audio_validated: false` are historical properties of that automated test campaign, not a denial of the developer's subsequent hardware report. A separate `developer-hardware-report.json` records the statement and its provenance.
+
+No exhaustive hardware timing/cache analysis or coverage of every possible generated result is claimed. Intel runtime operation and macOS 11 operation remain untested. The app is ad-hoc signed and not notarized.
 
 ## Before deciding to transfer
 

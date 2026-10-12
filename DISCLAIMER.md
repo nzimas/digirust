@@ -14,6 +14,12 @@ Elektron explicitly warns that firmware modifications can render instruments unu
 
 Manufacturer statement: https://www.elektronauts.com/t/elektronauts-topics-and-comments-regarding-modified-firmware/255891
 
+## Developer hardware report
+
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues.
+
+This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable.
+
 ## Your responsibility and risk
 
 Using the patcher, creating a modified image, transferring it and operating an instrument with it are entirely at your own risk. Risks include lost data, crashes, unexpected output, inability to start, failed updates, loss of normal operation and an unusable or irreversibly bricked instrument. Repair or replacement may be required at your expense.

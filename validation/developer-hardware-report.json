@@ -1,0 +1,11 @@
+{
+  "reportDate": "2026-10-12",
+  "source": "Developer statement supplied directly for publication",
+  "instrument": "Elektron Digitone II",
+  "statement": "The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues.",
+  "independentlyWitnessedByAutomation": false,
+  "exactInstalledImageHashProvided": false,
+  "installationEndorsement": false,
+  "guarantee": false,
+  "scope": "Developer-reported experience on one real instrument; automated test summaries remain historical evidence"
+}
