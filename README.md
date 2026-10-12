@@ -10,6 +10,12 @@ This is the author's musical direction, and the tools offered here follow it. Co
 
 **Only the patcher is distributed. No complete stock or modified Elektron firmware is provided.** You supply the supported official OS file; DigiRust creates a modified copy locally. The app does not connect to or update an instrument.
 
+## DigiRust demo
+
+[![DigiRust demo — watch on YouTube](https://img.youtube.com/vi/BoazPrfJgIs/hqdefault.jpg)](https://www.youtube.com/shorts/BoazPrfJgIs)
+
+[Watch the DigiRust demo on YouTube](https://www.youtube.com/shorts/BoazPrfJgIs).
+
 ## Download
 
 [Download DigiRust 1.2.0 for macOS](https://github.com/nzimas/digirust/releases/tag/v1.2.0) · [All releases](https://github.com/nzimas/digirust/releases)
