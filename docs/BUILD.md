@@ -12,6 +12,8 @@ cd digirust
 
 The build creates `dist/DigiRust.app`, compiles Apple Silicon and Intel executables, renders the application icon and applies ad-hoc signatures. It regenerates `Sources/BackendPin.swift` to match the signed bundled backend. Differences in that generated file after a local build are expected.
 
+The recorded local patcher testing used Apple Silicon and **macOS 27.0 (build 26A428)**. The build flags target macOS 11 as a minimum deployment version; this does not establish compatibility testing on macOS 11 or every later release.
+
 The runtime app needs no Python or development tools. Building from source needs Swift, Clang, lipo, sips, iconutil and codesign supplied by macOS/Xcode tools.
 
 This is the **patcher source**, not a complete firmware source tree. Its resources target the exact official OS 1.12 and RC17 output. Renaming the input or editing a version string cannot support a different OS.

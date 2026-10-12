@@ -1,0 +1,10 @@
+{
+  "recordedDate": "2026-10-12",
+  "product": "macOS",
+  "version": "27.0",
+  "build": "26A428",
+  "architecture": "arm64",
+  "source": "Local sw_vers and uname output",
+  "minimumCompilationTarget": "11.0",
+  "minimumTargetIsTestedVersion": false
+}

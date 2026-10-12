@@ -34,7 +34,7 @@ The author also previously confirmed stock reinstallation through startup recove
 
 The recorded RC17 automated tests used synthetic peripherals/DSP behavior and instruction compatibility shims. Their JSON summaries describe those local development runs; fields such as `physical_audio_validated: false` are historical properties of that automated test campaign, not a denial of the developer's subsequent hardware report. A separate `developer-hardware-report.json` records the statement and its provenance.
 
-No exhaustive hardware timing/cache analysis or coverage of every possible generated result is claimed. Intel runtime operation and macOS 11 operation remain untested. The app is ad-hoc signed and not notarized.
+No exhaustive hardware timing/cache analysis or coverage of every possible generated result is claimed. The local patcher test environment is Apple Silicon running **macOS 27.0 (build 26A428)**. The minimum compilation target is macOS 11; that is not a macOS 11 test result. Intel Macs and other macOS versions remain unverified. The app is ad-hoc signed and not notarized.
 
 ## Before deciding to transfer
 

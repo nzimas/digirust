@@ -21,9 +21,11 @@ This is the author's musical direction, and the tools offered here follow it. Co
 | Patcher | DigiRust **1.2.0** |
 | Generated modification | **RC17** |
 | Internal instrument OS version | Remains **1.12** |
-| macOS executable | Universal Apple Silicon / Intel; minimum target macOS 11 |
+| Tested environment | Apple Silicon, **macOS 27.0 (build 26A428)** |
+| Included executable architectures | Apple Silicon / Intel |
+| Minimum compilation target | macOS 11; **not a tested compatibility claim** |
 
-Testing was performed on Apple Silicon. Intel and macOS 11 runtime operation have not been verified. The current application is **ad-hoc signed, not Developer ID signed or notarized**. Signing status and firmware verification are different checks.
+Local patcher testing was performed on this Apple Silicon Mac running **macOS 27.0 (build 26A428)**. The macOS 11 setting is only the compiler/deployment target; it does not mean the app was tested on macOS 11. Intel Macs and other macOS versions have not been verified. The current application is **ad-hoc signed, not Developer ID signed or notarized**. Signing status and firmware verification are different checks.
 
 ## What DigiRust adds
 
