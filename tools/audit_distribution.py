@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib, json, re
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIRS = ('Sources', 'Resources', 'Vendor', 'Artwork', 'docs', 'validation', 'tools', '.github')
-PUBLIC_FILES = ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'build.sh', '.gitignore')
+PUBLIC_FILES = ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md', 'build.sh', '.gitignore')
 FORBIDDEN = {'.syx', '.elf', '.o', '.snap', '.dat', '.log'}
 # Complete known stock/generated transport and MAIN images, never publication assets.
 FIRMWARE_HASHES = {
@@ -31,7 +31,7 @@ def audit():
  for symbol, name in [('recipePin', 'firmware-patch.json'), ('additionsPin', 'additions.bin')]:
   pin = re.search(symbol + r' = "([0-9a-f]{64})"', pins).group(1)
   assert sha((ROOT / 'Resources' / name).read_bytes()) == pin, name
- for name in ['Resources/GCC-GPL.txt', 'Resources/GCC-Runtime-Exception.txt', 'Vendor/elektron-firmware-tool/LICENSE', 'Vendor/elektron-firmware-tool/PROVENANCE.md']:
+ for name in ['LICENSE', 'DISCLAIMER.md', 'Resources/GCC-GPL.txt', 'Resources/GCC-Runtime-Exception.txt', 'Vendor/elektron-firmware-tool/LICENSE', 'Vendor/elektron-firmware-tool/PROVENANCE.md']:
   assert (ROOT / name).stat().st_size > 0, name
  print(json.dumps({'publicationFiles': len(files), 'resourcePinsPassed': True, 'completeKnownFirmwareAbsent': True, 'instrumentAccessed': False}, indent=2))
  return files

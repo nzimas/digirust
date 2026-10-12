@@ -27,6 +27,8 @@ xcrun lipo -create build/app-arm64 build/app-x86_64 -output "$APP/Contents/MacOS
 cp Vendor/elektron-firmware-tool/LICENSE "$APP/Contents/Resources/elektron-firmware-tool-LICENSE.txt"
 cp Vendor/elektron-firmware-tool/PROVENANCE.md "$APP/Contents/Resources/tool-provenance.md"
 cp NOTICE.md "$APP/Contents/Resources/NOTICE.md"
+cp LICENSE "$APP/Contents/Resources/LICENSE"
+cp DISCLAIMER.md "$APP/Contents/Resources/DISCLAIMER.md"
 cat > "$APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

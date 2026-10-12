@@ -2,6 +2,8 @@
 
 **Experimental firmware tools for the Elektron Digitone II, distributed as a macOS patcher.**
 
+> **DIGITONE II ONLY — USE AT YOUR OWN RISK. Installing modified firmware may void your manufacturer warranty. It can render your instrument unusable; recovery is not guaranteed. Do not install it on any other machine. Read the [full disclaimer](DISCLAIMER.md) before use.**
+
 DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousmatic and other experimental electronic music**. Its generators favor unusual timbres, textures, varied rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
 
 This is the author's musical direction, and the tools offered here follow it. Conventional groovebox workflows, mainstream beatmaking and hip-hop beat generation are outside the project's design goals. The aim is to explore, sculpt and perform edgier electronic music.
@@ -58,8 +60,12 @@ Existing files and the stock input are never overwritten. Use a local filesystem
 - [Validation evidence, integrity hashes and limitations](docs/VALIDATION.md)
 - [Distribution contents, attribution and licensing](docs/DISTRIBUTION.md)
 - [Changes and version numbering](CHANGELOG.md)
-- [Third-party notices](NOTICE.md)
+- [MIT License](LICENSE), [important disclaimer](DISCLAIMER.md) and [third-party notices](NOTICE.md)
 
 This repository contains the patcher implementation, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. Building this repository rebuilds the macOS patcher for the pinned RC17 target.
 
 Independent project; not affiliated with or endorsed by Elektron. Modified firmware is experimental. Local integrity and emulator checks do not establish hardware safety or sound quality for every possible generated result.
+
+## License
+
+DigiRust-authored code and documentation are licensed under the [MIT License](LICENSE). Third-party components retain their own licenses; Elektron firmware is not covered by this grant. See [distribution and licensing](docs/DISTRIBUTION.md).

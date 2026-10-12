@@ -7,7 +7,7 @@ files = audit()
 dist = ROOT / 'dist'; app = dist / 'DigiRust.app'
 assert app.is_dir(), 'Run ./build.sh first'
 subprocess.run(['codesign', '--verify', '--deep', '--strict', str(app)], check=True)
-docs = [ROOT / n for n in ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md')]
+docs = [ROOT / n for n in ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md')]
 docs += [p for p in (ROOT / 'docs').rglob('*') if p.is_file()]
 archives = []
 for kind in ('macOS', 'source'):

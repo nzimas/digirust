@@ -1,5 +1,9 @@
 # Distribution notices
 
+**DIGITONE II ONLY. USE AT YOUR OWN RISK. Installing modified firmware may void your manufacturer warranty. Do not install the output on any other instrument. Recovery is not guaranteed. Read DISCLAIMER.md.**
+
+DigiRust-authored code, documentation, artwork and patch material are licensed under the MIT License in LICENSE, to the extent the author holds the applicable rights. Third-party components retain their own licenses; no rights in Elektron proprietary firmware are granted.
+
 Unofficial DigiRust patcher for Digitone II OS 1.12 / RC17. Not affiliated with Elektron. Requires the user's exact official OS 1.12 file. No stock or complete modified firmware is included.
 
 The bundled elektron-firmware-tool is independently implemented by Marcel Bierling and distributed under the MIT license; see elektron-firmware-tool-LICENSE.txt and tool-provenance.md. Its source is included in the source archive.
