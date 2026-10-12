@@ -1,0 +1,65 @@
+# DigiRust
+
+**Experimental firmware tools for the Elektron Digitone II, distributed as a macOS patcher.**
+
+DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousmatic and other experimental electronic music**. Its generators favor unusual timbres, textures, fractured rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
+
+This is the author's musical direction, and the tools offered here follow it. Conventional groovebox workflows, mainstream beatmaking and hip-hop beat generation are outside the project's design goals. The aim is to explore, sculpt and perform edgier electronic music.
+
+**Only the patcher is distributed. No complete stock or modified Elektron firmware is provided.** You supply the supported official OS file; DigiRust creates a modified copy locally. The app does not connect to or update an instrument.
+
+## Download
+
+[Download DigiRust 1.2.0 for macOS](https://github.com/nzimas/digirust/releases/tag/v1.2.0) · [All releases](https://github.com/nzimas/digirust/releases)
+
+| Component | Supported version |
+| --- | --- |
+| Instrument | Elektron Digitone II |
+| Official input firmware | OS **1.12**, exact file verified by SHA-256 |
+| Patcher | DigiRust **1.2.0** |
+| Generated modification | **RC17** |
+| Internal instrument OS version | Remains **1.12** |
+| macOS executable | Universal Apple Silicon / Intel; minimum target macOS 11 |
+
+Testing was performed on Apple Silicon. Intel and macOS 11 runtime operation have not been verified. The current application is **ad-hoc signed, not Developer ID signed or notarized**. Signing status and firmware verification are different checks.
+
+## What DigiRust adds
+
+| Tool | Purpose |
+| --- | --- |
+| Patch Generator | Generate a sound on the selected audio track: Abstract, Rhythmic → IDM / Rhythmic Noise, Melodic or Free. |
+| Kit Generator | Generate all 16 track sounds together; the same sound paths, with independent Brutality controls for IDM and Rhythmic Noise. |
+| Pattern Generator | Generate a complete pattern: Abstract, Rhythmic → IDM / Rhythmic Noise, or Melodic. Density on every path; Brutality on rhythmic paths. |
+| Phrase Generator | Generate a sequence for the selected track, preserving the other tracks: Abstract, Rhythmic or Melodic. |
+| Control All macros | A held TRACK encoder gesture affects the corresponding parameters across every subpage of SYN, FILTER, AMP and FX. |
+| Live drone latch | Hold a live audio track trig, then tap FUNC to retain its gate. Repeat to release; STOP clears latches. |
+| Perform Kit restoration | Exiting Perform Kit restores stored sound parameters to latched voices without issuing another note-on. |
+
+The pattern tools include varied rhythmic structures and tempos, and path-aware compressor generation. Brutality shapes synthesis and sequence behavior according to the chosen tool; it is not simply a volume control. High-contrast percentage bars support parameter editing.
+
+See the [complete feature and control guide](docs/FEATURES.md) and [RC17 release details](RC17-Features.md). The guide distinguishes tools with adjustable controls from immediate generation actions.
+
+## Create your firmware copy
+
+1. Obtain the official **Digitone II OS 1.12** from Elektron and extract its download archive. Use your own official `.syx` file; an already modified image is rejected.
+2. Extract the DigiRust macOS release archive and open `DigiRust.app`.
+3. Choose or drop the stock firmware file. DigiRust verifies that it is the exact supported input.
+4. Choose **Create patched firmware…** and a new local destination. Wait for **DigiRust RC17 verified and saved**.
+5. The default output filename is `Digitone_II_OS1.12_DigiRust_rc17.syx`.
+
+Existing files and the stock input are never overwritten. Use a local filesystem with hard-link support, such as APFS or HFS+. No Python, Homebrew or compiler is required to use the released app.
+
+**Creating the file does not install it.** Device transfer is a separate, deliberate operation outside this patcher. Read the [validation and recovery limits](docs/VALIDATION.md) before deciding whether to install a generated image. Follow Elektron's documentation for your instrument and keep the official firmware available. No recovery procedure can be guaranteed by this project's local tests.
+
+## Documentation
+
+- [Features, paths, track roles and performance controls](docs/FEATURES.md)
+- [Build from source and command-line use](docs/BUILD.md)
+- [Validation evidence, integrity hashes and limitations](docs/VALIDATION.md)
+- [Distribution contents, attribution and licensing](docs/DISTRIBUTION.md)
+- [Changes and version numbering](CHANGELOG.md)
+- [Third-party notices](NOTICE.md)
+
+This repository contains the patcher implementation, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. Building this repository rebuilds the macOS patcher for the pinned RC17 target.
+
+Independent project; not affiliated with or endorsed by Elektron. Modified firmware is experimental. Local integrity and emulator checks do not establish hardware safety or sound quality for every possible generated result.

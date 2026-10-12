@@ -1,0 +1,7 @@
+{
+  "patcherVersion": "1.2.0",
+  "firmwareTarget": "RC17",
+  "rebuiltCuratedSource": true,
+  "exactOutputSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "instrumentAccessed": false
+}

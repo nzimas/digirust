@@ -1,0 +1,27 @@
+{
+  "version": "1.2.0",
+  "firmware": "RC17",
+  "guiOutputByteExact": true,
+  "extractedArchiveOutputByteExact": true,
+  "extractedSignatureVerified": true,
+  "referenceAppBrandAbsent": true,
+  "firmwareSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "archives": [
+    {
+      "archive": "DigiRust-1.2.0-macOS.zip",
+      "bytes": 770086,
+      "files": 16,
+      "sha256": "d3390afcded52aa23c2b01a0ed1c239ca45b79c8791059dda5a8ea9bcf1e7820",
+      "containsFullFirmware": false,
+      "containsFullStockTemplates": false
+    },
+    {
+      "archive": "DigiRust-1.2.0-source.zip",
+      "bytes": 227059,
+      "files": 34,
+      "sha256": "eb95492352a69bfe6237eeee208231004e2fa5a97994e5b4023465463defc6c2",
+      "containsFullFirmware": false,
+      "containsFullStockTemplates": false
+    }
+  ]
+}

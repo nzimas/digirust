@@ -1,0 +1,110 @@
+{
+  "revision": "rc17",
+  "project": "DigiRust",
+  "stock_os_version": "1.12",
+  "firmware_sha256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "main_sha256": "4469ec0c142b628b457020fa4270bcacc2e4817c63157843d13acc598b2fa8e1",
+  "kit_paths": [
+    "IDM",
+    "Rhythmic Noise"
+  ],
+  "kit_brutality_default": 35,
+  "kit_brutality_range": [
+    0,
+    100
+  ],
+  "independent_runtime_values": true,
+  "reset_on_restart": true,
+  "kit_generation_leaves_controls_selected": true,
+  "host_kit_cases": 256,
+  "host_sound_cases": 4096,
+  "host_target_kit_cases": 32,
+  "stock_codec_roundtrips": 512,
+  "kit_bar_raster_cases": 28,
+  "installed_kit_transaction_cases": 16,
+  "retained_patch_parity_cases": 90,
+  "retained_pattern_parity_cases": 48,
+  "full_os_fresh_boot_passed": true,
+  "actual_panel_stages": [
+    {
+      "stage": "idm-open",
+      "kit_brutality": [
+        35,
+        35
+      ],
+      "generations": 0
+    },
+    {
+      "stage": "idm-edit",
+      "kit_brutality": [
+        75,
+        35
+      ],
+      "generations": 0
+    },
+    {
+      "stage": "idm-generate1",
+      "kit_brutality": [
+        75,
+        35
+      ],
+      "generations": 1
+    },
+    {
+      "stage": "idm-generate2",
+      "kit_brutality": [
+        75,
+        35
+      ],
+      "generations": 2
+    },
+    {
+      "stage": "idm-cancel",
+      "kit_brutality": [
+        75,
+        35
+      ],
+      "generations": 2
+    },
+    {
+      "stage": "noise-open",
+      "kit_brutality": [
+        75,
+        35
+      ],
+      "generations": 2
+    },
+    {
+      "stage": "noise-edit",
+      "kit_brutality": [
+        75,
+        95
+      ],
+      "generations": 2
+    },
+    {
+      "stage": "noise-generate1",
+      "kit_brutality": [
+        75,
+        95
+      ],
+      "generations": 3
+    },
+    {
+      "stage": "noise-generate2",
+      "kit_brutality": [
+        75,
+        95
+      ],
+      "generations": 4
+    }
+  ],
+  "instrument_accessed": false,
+  "deployment_approved": false,
+  "physical_audio_validated": false,
+  "limitations": [
+    "Synthetic DSP/peripherals and ISA shims; no physical audio, hardware timing or cache validation",
+    "Gain compensation is not an audio limiter",
+    "Kit percentages reset to 35% on reboot"
+  ]
+}

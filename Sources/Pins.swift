@@ -1,0 +1,2 @@
+let recipePin = "100eed55b5374db3f7ddd678ade4f9d1a13d2548afe9a08e6915699c6e3adf5e"
+let additionsPin = "7fbfed6f33ba8a775c3c38535860c94116aaa7b791a98f78708e3b1a0872b536"

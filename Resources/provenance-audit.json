@@ -1,0 +1,196 @@
+{
+  "release": "RC17",
+  "operations": 27857,
+  "literalBytes": 106006,
+  "stockSourcedBytes": 3293706,
+  "knownStockDerivedBlocks": [
+    {
+      "label": "sound template 0",
+      "length": 359,
+      "occurrences": 1,
+      "sha256": "b0dd5f6d7022fbf1ed924dc69a0c0150f5d420ba9b502cbdb67ed36e9fd29433"
+    },
+    {
+      "label": "sound template 1",
+      "length": 359,
+      "occurrences": 1,
+      "sha256": "5a5b55ac69ff2763c52d6892b27839aa49782de1dee4d70f4f6cece9260da527"
+    },
+    {
+      "label": "sound template 2",
+      "length": 359,
+      "occurrences": 1,
+      "sha256": "54170d0e1fed7f8e7488442927bcce951aa31a1ba94980f39381c0c19ea696a7"
+    },
+    {
+      "label": "sound template 3",
+      "length": 359,
+      "occurrences": 1,
+      "sha256": "1f7456d62117fc4b3c3f95b5970b6ad3063c7d8b7458e550d4e7ca4b555be30e"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 6,
+      "occurrences": 10,
+      "sha256": "3d2695518d50d9d1cd4ed14fd391ccd9891f2ff58024327022f13b891dc99927"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 32,
+      "sha256": "932bbddb03ada19536fa5af4c9a118f86b4a7731a45a3adc9ad1c578afc93bc7"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 2,
+      "occurrences": 148,
+      "sha256": "110ee2dda2ee0a6391d1a47b48a2a2d1957562fd734b15ca4dbe723e671c09b8"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 6,
+      "occurrences": 1,
+      "sha256": "6b46ef45b86e5ee8bd35279968b649b37b8df80d0fac1088f22f3adcf96a3815"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 2,
+      "sha256": "a531842ab1f74b02d271e15fcc320cb83ddbd175583c0e96623cb747f26c6db1"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 2,
+      "occurrences": 328,
+      "sha256": "774e33e878c3e22aba021f52a92fce5221c8c8e152ce67c08557d23eea236e5d"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 8,
+      "occurrences": 2,
+      "sha256": "6b5979593d2cdf86959793bf1fa1a0520d01c563ef868a01522106ba1428cf5e"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 5,
+      "sha256": "d1477842626cd07e01e9f71661739804c330f885255c1804d37feb0cdeb3fc51"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 17,
+      "sha256": "12d338634f70e3ff15edd2a5b562f3f36d22c53b0d2df23f8ab61ad6adf44900"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 8,
+      "occurrences": 2,
+      "sha256": "88c3015bea265af524001c19cb4e3b9743131f26f46f5d0e58dfb2f8622283c1"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 18,
+      "sha256": "23201b350b902ad73d89ce6a89eee29dfa14dd42612057eede16e4b546dc6759"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 4,
+      "sha256": "ec034e0d2c52dc165eb3dd651aad25e1ec253cf452d549a7ea3c55678da039c4"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 8,
+      "occurrences": 1,
+      "sha256": "9b78b6778f56449ca9429e734d2140df96316ae0e9eea0b9d6eea089f82ddbd0"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 32,
+      "sha256": "932bbddb03ada19536fa5af4c9a118f86b4a7731a45a3adc9ad1c578afc93bc7"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 4,
+      "sha256": "6e046143e4e1f4a9d672335be5e94952daae6ac471062980646ef278f1a83c05"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 10,
+      "occurrences": 1,
+      "sha256": "a7515a46f8ec046740ecfcfa8bda610e2f3759b180d9332128fb7271800ef815"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 2,
+      "sha256": "4e9eedd2c2ed457b39a60e3fca00ded823bdedd01f39e8ecfeebfd8eba53bbbf"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 2,
+      "sha256": "bb98bbc919b067095454b650f726e18eb4b23e5f9972932ed3e1986d5ae5bf0b"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 2,
+      "occurrences": 39,
+      "sha256": "33cf864c1fd1d0c2f89cfbc601bca43b1af55d2a68726413cded25ffb02d3c57"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 8,
+      "occurrences": 1,
+      "sha256": "784938370f9fb15c505636fe4e5a94b5efb1d9276ec09a27de55484f781bed1f"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 16,
+      "sha256": "8c532fe588d875e129a1fbdda2d83ead4577a118ea3f1fad8d75b63983c1d9bc"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 12,
+      "sha256": "64ea5c2f4e5b640360ae6d399f3de65f2914185f8055e9d08553b8a3c16d5e6d"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 10,
+      "occurrences": 1,
+      "sha256": "984d2a37c04077edd225184cafbaa961e112c001b8b0ca6e9dea09955ae6dfbd"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 8,
+      "sha256": "7f284fb65360c6f575800b1a7f6020278ea44dcfb08684ee639a5b361437086c"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 2,
+      "sha256": "5a6dc32ef3e38c0f61a3b9112c9f78e7904bbdca932dda2d92df46563b2db8b4"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 2,
+      "occurrences": 3,
+      "sha256": "7893607c94f9568ada94005d128cdfe7745e4ae551293ba48f1fdfc38956e159"
+    },
+    {
+      "label": "fallback branch constant",
+      "length": 2,
+      "occurrences": 7,
+      "sha256": "2a30aa67b93279e4b85dd86976c310e396630e37d2aa1241c9b19b8984ec5fcd"
+    }
+  ],
+  "allKnownBlocksSourcedFromUserInput": true,
+  "limitations": "Byte provenance audit, not a legal opinion. Incidental short identical instructions and constants may remain in independently compiled additions."
+}

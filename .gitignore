@@ -1,0 +1,14 @@
+.DS_Store
+build/
+dist/
+test-results/
+__pycache__/
+*.pyc
+*.syx
+*.elf
+*.o
+*.snap
+*.dat
+*.log
+.env
+.env.*

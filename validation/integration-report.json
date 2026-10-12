@@ -1,0 +1,83 @@
+{
+  "app": "DigiRust",
+  "version": "1.2.0",
+  "firmware": "RC17",
+  "tests": [
+    {
+      "test": "exact RC17 output",
+      "passed": true
+    },
+    {
+      "test": "existing output retained",
+      "passed": true
+    },
+    {
+      "test": "input overwrite refused",
+      "passed": true
+    },
+    {
+      "test": "single-byte corruption rejected",
+      "passed": true
+    },
+    {
+      "test": "already modified firmware rejected",
+      "passed": true
+    },
+    {
+      "test": "missing input rejected",
+      "passed": true
+    },
+    {
+      "test": "folder input rejected",
+      "passed": true
+    },
+    {
+      "test": "empty input rejected",
+      "passed": true
+    },
+    {
+      "test": "oversized input rejected",
+      "passed": true
+    },
+    {
+      "test": "output symlink rejected",
+      "passed": true
+    },
+    {
+      "test": "output hard-link rejected",
+      "passed": true
+    },
+    {
+      "test": "invalid destination publishes nothing",
+      "passed": true
+    },
+    {
+      "test": "tampered firmware-patch.json rejected",
+      "passed": true
+    },
+    {
+      "test": "tampered additions.bin rejected",
+      "passed": true
+    },
+    {
+      "test": "tampered elektron-firmware-tool rejected",
+      "passed": true
+    },
+    {
+      "test": "missing patch resource rejected",
+      "passed": true
+    },
+    {
+      "test": "concurrent save is exclusive",
+      "passed": true
+    },
+    {
+      "test": "stock input unchanged after all tests",
+      "passed": true
+    }
+  ],
+  "count": 18,
+  "allPassed": true,
+  "stockInputSHA256": "7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35",
+  "outputSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda"
+}

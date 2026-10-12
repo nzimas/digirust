@@ -1,0 +1,22 @@
+name: Patcher publication audit
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 tools/audit_distribution.py
+      - name: Reject tracked firmware and private build files
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from tools.audit_distribution import ROOT, public_files
+          allowed = {str(p.relative_to(ROOT)) for p in public_files()}
+          tracked = set(subprocess.check_output(['git', 'ls-files'], text=True).splitlines())
+          assert tracked <= allowed, sorted(tracked - allowed)
+          PY
