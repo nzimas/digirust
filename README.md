@@ -2,7 +2,7 @@
 
 **Experimental firmware tools for the Elektron Digitone II, distributed as a macOS patcher.**
 
-DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousmatic and other experimental electronic music**. Its generators favor unusual timbres, textures, fractured rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
+DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousmatic and other experimental electronic music**. Its generators favor unusual timbres, textures, varied rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
 
 This is the author's musical direction, and the tools offered here follow it. Conventional groovebox workflows, mainstream beatmaking and hip-hop beat generation are outside the project's design goals. The aim is to explore, sculpt and perform edgier electronic music.
 
