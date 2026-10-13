@@ -1,6 +1,6 @@
-# DigiRust RC17 — rhythmic kit Brutality
+# DigiRust — rhythmic kit Brutality
 
-Separate firmware release based on official Digitone II OS **1.12**. Internal OS version remains **1.12**. Previous firmware releases and DigiRust RC16 patcher archives are preserved.
+Separate firmware release based on official Digitone II OS **1.12**. Internal OS version remains **1.12**. Previous firmware releases and previous patcher archives are preserved.
 
 ## Kit Generator workflow
 
@@ -8,7 +8,7 @@ Choose **Kit Generator → Rhythmic → IDM** or **Rhythmic Noise**. Each opens 
 
 Press **DATA/LEVEL** to edit; turn the encoder to set **0–100%**; press it again to finish. **NO** cancels an in-progress edit. **YES** generates a complete 16-track kit and keeps the screen selected, so repeated YES presses generate more kits. DATA never generates a kit. NO outside editing returns to the parent menu.
 
-IDM and Rhythmic Noise each remember an independent value while the instrument is running, initially **35%**. Values reset to 35% on restart. Kit values are independent of Patch Generator and Pattern Generator values. At 35%, the same seed produces exactly the previous RC16 rhythmic kit, preserving the existing default palette.
+IDM and Rhythmic Noise each remember an independent value while the instrument is running, initially **35%**. Values reset to 35% on restart. Kit values are independent of Patch Generator and Pattern Generator values. At 35%, the same seed produces exactly the previous rhythmic kit, preserving the existing default palette.
 
 ## Effect on generated sounds
 

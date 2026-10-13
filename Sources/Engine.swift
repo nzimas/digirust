@@ -79,7 +79,7 @@ final class Engine {
         try runTool(["-i", snapshot.path, "-d", "3", "-o", temporary.path], in: temporary)
         let main = try Data(contentsOf: temporary.appendingPathComponent("section_3_MAIN_OS.bin"))
         guard digest(main) == recipe.mainInputSHA256 else { throw fail("The stock operating system section failed verification.") }
-        progress(0.35, "Applying DigiRust RC17…")
+        progress(0.35, "Applying DigiRust…")
         var result = Data(); result.reserveCapacity(recipe.outputSize)
         for op in recipe.operations {
             guard op.count == 3, op[0] == 0 || op[0] == 1, op[1] >= 0, op[2] > 0 else { throw fail("Invalid patch operation.") }
@@ -95,9 +95,9 @@ final class Engine {
         let candidate = temporary.appendingPathComponent("candidate.syx")
         progress(0.55, "Rebuilding the firmware package…")
         try runTool(["-i", snapshot.path, "-c", "3", patchedMain.path, "-l", "0", "-o", candidate.path], in: temporary)
-        progress(0.85, "Verifying the complete RC17 package…")
+        progress(0.85, "Verifying the complete DigiRust package…")
         let final = try Data(contentsOf: candidate)
-        guard digest(final) == recipe.outputSHA256 else { throw fail("The completed firmware differs from the verified RC17 release. No output was saved.") }
+        guard digest(final) == recipe.outputSHA256 else { throw fail("The completed firmware differs from the verified DigiRust release. No output was saved.") }
         try runTool(["-i", candidate.path], in: temporary)
         // Publish a completely written file using an atomic, exclusive hard link on the destination volume.
         let staging = output.deletingLastPathComponent().appendingPathComponent(".DigiRust-" + UUID().uuidString)
@@ -108,6 +108,6 @@ final class Engine {
         do { try handle.write(contentsOf: final); guard fsync(fd) == 0 else { throw fail("Could not finish writing the output file.") }; try handle.close() }
         catch { try? handle.close(); throw error }
         guard Darwin.link(staging.path, output.path) == 0 else { throw fail("Could not save the output. Use a new filename on a local APFS or HFS+ volume; existing files are never replaced.") }
-        progress(1, "RC17 created and verified.")
+        progress(1, "DigiRust created and verified.")
     }
 }

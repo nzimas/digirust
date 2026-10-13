@@ -171,7 +171,7 @@ export async function patch(raw,recipeBytes,additions,progress=()=>{}) {
   progress(15,'Unpacking your operating system');const parsed=decode(raw),{blob,sections,info}=parsed;
   const main=sections.find(s=>s.id===3);check(main,'MAIN OS section missing.');
   const original=depack(blob.subarray(main.offset,main.offset+main.size));check(await digest(original)===recipe.mainInputSHA256,'Stock MAIN integrity check failed.');
-  progress(30,'Applying DigiRust RC17');const image=applyRecipe(original,additions,recipe);check(await digest(image)===recipe.mainOutputSHA256,'Modified MAIN integrity check failed.');
+  progress(30,'Applying DigiRust');const image=applyRecipe(original,additions,recipe);check(await digest(image)===recipe.mainOutputSHA256,'Modified MAIN integrity check failed.');
   progress(45,'Compressing the modified operating system');const packed=pack(image);check(equal(depack(packed),image),'Compression round-trip failed.');
   progress(75,'Rebuilding and verifying the package');const key=await findKey(blob,sections),out=new Buffer(blob.length+packed.length);
   const first=Math.min(...sections.map(s=>s.offset));out.append(blob.subarray(0,first));
@@ -180,7 +180,7 @@ export async function patch(raw,recipeBytes,additions,progress=()=>{}) {
     put32(out.a,32+s.index*16+4,p);put32(out.a,32+s.index*16+8,bytes.length);
   }
   out.zero(align(out.n+4)-out.n);out.append(await hmac(key,out.bytes()));key.fill(0);
-  const result=encode(out.bytes(),info);check(await digest(result)===PINS.output&&recipe.outputSHA256===PINS.output,'Final RC17 package differs from the verified reference. Nothing will be downloaded.');
+  const result=encode(out.bytes(),info);check(await digest(result)===PINS.output&&recipe.outputSHA256===PINS.output,'Final DigiRust package differs from the verified reference. Nothing will be downloaded.');
   const rebuilt=decode(result);for(const s of sections.filter(s=>s.id!==3)){const r=rebuilt.sections.find(r=>r.id===s.id);check(r&&equal(blob.subarray(s.offset,s.offset+s.size),rebuilt.blob.subarray(r.offset,r.offset+r.size)),'Protected section changed.');}
-  progress(100,'RC17 verified — ready to download');return result;
+  progress(100,'DigiRust verified — ready to download');return result;
 }

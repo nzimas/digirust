@@ -17,7 +17,7 @@ async function start(file,action){
       if(data.type==='valid'){valid=true;$('file-hint').textContent='Verified official Digitone II OS 1.12';stop();status('Official OS 1.12 verified','Review the warning below, then create your DigiRust firmware copy.');return;}
       if(data.type==='done'){
         url=URL.createObjectURL(new Blob([data.bytes],{type:'application/octet-stream'}));download.href=url;download.hidden=false;
-        stop();status('Your firmware is ready','The complete RC17 file passed verification. Download it below. Installation is a separate decision.','success',100);download.focus();return;
+        stop();status('Your firmware is ready','The complete DigiRust file passed verification. Download it below. Installation is a separate decision.','success',100);download.focus();return;
       }
       valid=action==='patch';stop();status('No output created',data.text,'error');
     };

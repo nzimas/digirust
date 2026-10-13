@@ -47,13 +47,13 @@ For complete reconstruction checks, supply your own supported firmware locally:
 node tests/web_core.mjs /path/to/official/Digitone_II_OS1.12.syx
 ```
 
-The extended run checks complete RC17 hash/length, unchanged input, modified firmware rejection, one-bit corruption, wrong-device input and tampered resources. The firmware remains private and no output file is committed. See `validation/web-patcher-report.json` for the recorded 24-check run and browser UI evidence.
+The extended run checks complete DigiRust hash/length, unchanged input, modified firmware rejection, one-bit corruption, wrong-device input and tampered resources. The firmware remains private and no output file is committed. See `validation/web-patcher-report.json` for the recorded 24-check run and browser UI evidence.
 
 ## Deployment
 
 `.github/workflows/pages.yml` runs the public codec tests, prepares resources, audits the publication boundary and checks links. It uploads **only `web/`** as a Pages artifact, then deploys it through GitHub Actions. GitHub Pages is configured with the workflow build type. Pushes to `main` update the site; the existing publication audit also runs independently.
 
-The repository name determines the lowercase `/digirust/` path. Every internal site link and worker/resource URL is relative, so the project path is retained. The firmware revision is still RC17 and the internal vendor OS remains 1.12.
+The repository name determines the lowercase `/digirust/` path. Every internal site link and worker/resource URL is relative, so the project path is retained. The generated firmware is unchanged and the internal vendor OS remains 1.12.
 
 ## Limits
 

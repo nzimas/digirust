@@ -16,9 +16,9 @@ Leaves without percentage controls generate directly when selected and confirmed
 - **Rhythmic → IDM:** articulated experimental percussion and glitches, with organized but varied structures.
 - **Rhythmic → Rhythmic Noise:** harsher synthesis and effects, industrial intensity and rhythmically purposeful noise.
 - **Melodic:** pitched experimental sound and sequence generation; melodic does not imply a conventional lead or organ preset.
-- **Free:** guarded broad sound exploration. Available in Patch and Kit; not a Pattern or Phrase path in RC17.
+- **Free:** guarded broad sound exploration. Available in Patch and Kit; not a Pattern or Phrase path in DigiRust.
 
-Phrase Generator has Abstract, Rhythmic and Melodic leaves; its Rhythmic leaf has no IDM/Noise submenu in RC17.
+Phrase Generator has Abstract, Rhythmic and Melodic leaves; its Rhythmic leaf has no IDM/Noise submenu in DigiRust.
 
 ## Scope and controls
 
@@ -27,7 +27,7 @@ Phrase Generator has Abstract, Rhythmic and Melodic leaves; its Rhythmic leaf ha
 | Patch | Selected audio track sound only; selected MIDI tracks are refused | Brutality for Abstract, IDM and Rhythmic Noise |
 | Kit | All 16 track sounds, including conversion of MIDI tracks to generated audio tracks | Independent Brutality for IDM and Rhythmic Noise |
 | Pattern | Complete sequence content; compressor and tempo behavior are part of generation | Density on Abstract, IDM, Noise and Melodic; Brutality on IDM and Noise |
-| Phrase | Selected track sequence; other track sequences preserved | No Density/Brutality editing screen in RC17 |
+| Phrase | Selected track sequence; other track sequences preserved | No Density/Brutality editing screen in DigiRust |
 
 Kit generation preserves the pattern and non-sound kit settings, including compressor settings. Pattern generation has its own compressor logic. Patch Brutality does not directly set the compressor.
 
@@ -39,7 +39,7 @@ For sounds, increasing Brutality influences source complexity, modulation, drive
 
 Controls run from **0–100%**. Pattern Density defaults to **30%**; exposed Brutality controls default to **35%**. Values are independent between tools and applicable paths, and reset on restart. The bar fills behind its label, with text contrast inverted over the fill. Selection and editing use different chevrons.
 
-RC17 adds kit Brutality to IDM and Noise. At 35%, the same seed produces byte-identical kits to RC16. Abstract kits retain their fixed 35% sound treatment. Melodic and Free kits retain their prior behavior.
+DigiRust adds kit Brutality to IDM and Noise. At 35%, the same seed produces byte-identical kits to the preceding development build. Abstract kits retain their fixed 35% sound treatment. Melodic and Free kits retain their prior behavior.
 
 ### Track roles
 

@@ -5,13 +5,13 @@
 | File | SHA-256 |
 | --- | --- |
 | Official Digitone II OS 1.12 input | `7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35` |
-| DigiRust RC17 generated `.syx` | `9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda` |
+| DigiRust generated `.syx` | `9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda` |
 
 The app checks input identity, resource integrity and complete output identity. It reconstructs unchanged content from the user input and additions from the bundled recipe. Package checks cover container integrity and unchanged protected sections. Hash equality establishes file identity, not safe operation on hardware.
 
 ## Recorded local tests
 
-The JSON summaries in `validation/` record the RC17 development checks and DigiRust 1.2.0 delivery checks:
+The JSON summaries in `validation/` record the DigiRust development checks and DigiRust 1.2.0 delivery checks:
 
 - 256 rhythmic kits / 4,096 sounds in host tests, including default-35% RC16 parity.
 - 32 host/ColdFire kit parity cases and 512 stock sound-codec round trips.
@@ -32,7 +32,7 @@ This records the developer's experience on that instrument. It is a factual repo
 
 The author also previously confirmed stock reinstallation through startup recovery on a healthy Digitone II. That does not guarantee recovery after every possible failure.
 
-The recorded RC17 automated tests used synthetic peripherals/DSP behavior and instruction compatibility shims. Their JSON summaries describe those local development runs; fields such as `physical_audio_validated: false` are historical properties of that automated test campaign, not a denial of the developer's subsequent hardware report. A separate `developer-hardware-report.json` records the statement and its provenance.
+The recorded DigiRust automated tests used synthetic peripherals/DSP behavior and instruction compatibility shims. Their JSON summaries describe those local development runs; fields such as `physical_audio_validated: false` are historical properties of that automated test campaign, not a denial of the developer's subsequent hardware report. A separate `developer-hardware-report.json` records the statement and its provenance.
 
 No exhaustive hardware timing/cache analysis or coverage of every possible generated result is claimed. The local patcher test environment is Apple Silicon running **macOS 27.0 (build 26A428)**. The minimum compilation target is macOS 11; that is not a macOS 11 test result. Intel Macs and other macOS versions remain unverified. The app is ad-hoc signed and not notarized.
 

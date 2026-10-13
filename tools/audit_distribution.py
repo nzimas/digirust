@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib, json, re
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIRS = ('Sources', 'Resources', 'Vendor', 'Artwork', 'docs', 'validation', 'tools', '.github', 'web', 'tests')
-PUBLIC_FILES = ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md', 'build.sh', '.gitignore')
+PUBLIC_FILES = ('README.md', 'NOTICE.md', 'DigiRust-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md', 'build.sh', '.gitignore')
 FORBIDDEN = {'.syx', '.elf', '.o', '.snap', '.dat', '.log'}
 # Complete known stock/generated transport and MAIN images, never publication assets.
 FIRMWARE_HASHES = {

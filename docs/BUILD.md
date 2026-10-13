@@ -20,17 +20,17 @@ The recorded local patcher testing used Apple Silicon and **macOS 27.0 (build 26
 
 The runtime app needs no Python or development tools. Building from source needs Swift, Clang, lipo, sips, iconutil and codesign supplied by macOS/Xcode tools.
 
-This is the **patcher source**, not a complete firmware source tree. Its resources target the exact official OS 1.12 and RC17 output. Renaming the input or editing a version string cannot support a different OS.
+This is the **patcher source**, not a complete firmware source tree. Its resources target the exact official OS 1.12 and DigiRust output. Renaming the input or editing a version string cannot support a different OS.
 
 ## Command-line patching
 
 ```sh
 "dist/DigiRust.app/Contents/MacOS/DigiRust" --patch \
   /path/to/official/Digitone_II_OS1.12.syx \
-  /path/to/new/Digitone_II_OS1.12_DigiRust_rc17.syx
+  /path/to/new/Digitone_II_OS1.12_DigiRust.syx
 ```
 
-Exit zero means the output was created and verified against the pinned RC17 SHA-256. Existing output files, aliases to the input, invalid input and tampered resources are rejected. Output is published only after verification. No instrument transfer occurs.
+Exit zero means the output was created and verified against the pinned DigiRust SHA-256. Existing output files, aliases to the input, invalid input and tampered resources are rejected. Output is published only after verification. No instrument transfer occurs.
 
 ## Validate publication contents
 
@@ -52,7 +52,7 @@ To test reconstruction locally, use your own supported official firmware and com
 | `Vendor/` | Bundled firmware-format tool source, license and provenance |
 | `Artwork/` | Source code for the app icon |
 | `docs/` | User, build, validation and distribution documentation |
-| `validation/` | JSON summaries from local RC17 and patcher tests |
+| `validation/` | JSON summaries from local DigiRust and patcher tests |
 | `tools/` | Publication audit, website preparation and release packager |
 | `web/` | GitHub Pages site and browser-local patcher |
 | `tests/` | Native C / browser codec parity and patcher tests |

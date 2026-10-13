@@ -7,7 +7,7 @@ files = audit()
 dist = ROOT / 'dist'; app = dist / 'DigiRust.app'
 assert app.is_dir(), 'Run ./build.sh first'
 subprocess.run(['codesign', '--verify', '--deep', '--strict', str(app)], check=True)
-docs = [ROOT / n for n in ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md')]
+docs = [ROOT / n for n in ('README.md', 'NOTICE.md', 'DigiRust-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md')]
 docs += [p for p in (ROOT / 'docs').rglob('*') if p.is_file()]
 archives = []
 for kind in ('macOS', 'source'):
@@ -20,5 +20,5 @@ for kind in ('macOS', 'source'):
    check_asset(name, data); z.write(p, name)
  archives.append({'archive': target.name, 'sha256': sha(target.read_bytes()), 'bytes': target.stat().st_size})
 (dist / 'SHA256SUMS.txt').write_text(''.join(a['sha256'] + '  ' + a['archive'] + '\n' for a in archives))
-(dist / 'publication-report.json').write_text(json.dumps({'patcherVersion': VERSION, 'firmwareTarget': 'RC17', 'completeFirmwareIncluded': False, 'archives': archives}, indent=2) + '\n')
+(dist / 'publication-report.json').write_text(json.dumps({'patcherVersion': VERSION, 'firmwareTarget': 'DigiRust', 'completeFirmwareIncluded': False, 'archives': archives}, indent=2) + '\n')
 print(json.dumps(archives, indent=2))

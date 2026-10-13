@@ -20,7 +20,7 @@ This is the author's musical direction, and the tools offered here follow it. Co
 
 [Visit DigiRust](https://nzimas.github.io/digirust/) · [Open the browser patcher](https://nzimas.github.io/digirust/patcher.html) · [Online manual](https://nzimas.github.io/digirust/manual.html)
 
-The website includes the patcher, demo, manual and disclaimer. Firmware is processed in a background worker on your device and is never uploaded. The browser output is byte-identical to RC17 from the macOS app. No browser MIDI access or automatic installation is implemented.
+The website includes the patcher, demo, manual and disclaimer. Firmware is processed in a background worker on your device and is never uploaded. The browser output is byte-identical to DigiRust from the macOS app. No browser MIDI access or automatic installation is implemented.
 
 ## macOS download
 
@@ -31,7 +31,7 @@ The website includes the patcher, demo, manual and disclaimer. Firmware is proce
 | Instrument | Elektron Digitone II |
 | Official input firmware | OS **1.12**, exact file verified by SHA-256 |
 | Patcher | DigiRust **1.2.0** |
-| Generated modification | **RC17** |
+| Generated modification | **DigiRust** |
 | Internal instrument OS version | Remains **1.12** |
 | Tested environment | Apple Silicon, **macOS 27.0 (build 26A428)** |
 | Included executable architectures | Apple Silicon / Intel |
@@ -53,7 +53,7 @@ Local patcher testing was performed on this Apple Silicon Mac running **macOS 27
 
 The pattern tools include varied rhythmic structures and tempos, and path-aware compressor generation. Brutality shapes synthesis and sequence behavior according to the chosen tool; it is not simply a volume control. High-contrast percentage bars support parameter editing.
 
-See the [complete feature and control guide](docs/FEATURES.md) and [RC17 release details](RC17-Features.md). The guide distinguishes tools with adjustable controls from immediate generation actions.
+See the [complete feature and control guide](docs/FEATURES.md) and [DigiRust release details](DigiRust-Features.md). The guide distinguishes tools with adjustable controls from immediate generation actions.
 
 ## Create your firmware copy
 
@@ -61,7 +61,7 @@ See the [complete feature and control guide](docs/FEATURES.md) and [RC17 release
 2. Open the [browser patcher](https://nzimas.github.io/digirust/patcher.html) in a current browser over HTTPS, with Web Crypto and Web Workers enabled.
 3. Choose or drop the official firmware. DigiRust checks that it is the exact supported file.
 4. Read the disclaimer, acknowledge the warning and choose **Create firmware copy**. You can cancel while it runs.
-5. When verification succeeds, choose **Download verified RC17 firmware**. The filename is `Digitone_II_OS1.12_DigiRust_rc17.syx`.
+5. When verification succeeds, choose **Download verified DigiRust firmware**. The filename is `Digitone_II_OS1.12_DigiRust.syx`.
 
 Your original file is unchanged. Browser saving follows your browser's download behavior. No Python, Homebrew or compiler is required. The site's patch resources need a network connection; your firmware itself stays in browser memory. YouTube is loaded only if you choose to play the demo.
 
@@ -85,7 +85,7 @@ This records the developer's experience on that instrument. It is a factual repo
 - [Changes and version numbering](CHANGELOG.md)
 - [MIT License](LICENSE), [important disclaimer](DISCLAIMER.md) and [third-party notices](NOTICE.md)
 
-This repository contains both patcher implementations, the static website, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. The macOS build rebuilds the native app for the pinned RC17 target; the web preparation step stages the same resources for the browser patcher.
+This repository contains both patcher implementations, the static website, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. The macOS build rebuilds the native app for the pinned DigiRust target; the web preparation step stages the same resources for the browser patcher.
 
 Independent project; not affiliated with or endorsed by Elektron. Modified firmware is experimental. Local integrity and emulator checks do not establish hardware safety or sound quality for every possible generated result.
 

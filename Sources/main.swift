@@ -110,7 +110,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         let mark = RustMark(); mark.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([mark.widthAnchor.constraint(equalToConstant: 58), mark.heightAnchor.constraint(equalToConstant: 58)])
         let brand = stack([label("DigiRust", 34, .bold), label("Firmware patcher for Digitone II", 18, .regular, Palette.secondary)], spacing: 4)
-        let badge = label("RC17", 18, .semibold, Palette.accent); badge.setAccessibilityLabel("Firmware release RC17")
+        let badge = label("OS 1.12", 18, .semibold, Palette.accent); badge.setAccessibilityLabel("Based on official OS 1.12")
         let spacer = NSView(); spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
         let header = stack([mark, brand, spacer, badge], vertical: false, spacing: 18)
         let separator = NSBox(); separator.boxType = .separator
@@ -134,7 +134,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         fileLine.widthAnchor.constraint(equalTo: fileContents.widthAnchor).isActive = true
         inset(fileContents, in: drop, amount: 20); inset(drop, in: fileCard, amount: 0)
         let releaseCard = Card()
-        let releaseContents = stack([label("02   DIGIRUST RC17", 16, .semibold, Palette.accent), label("Patch, kit, pattern & phrase generators", 21, .semibold), label("Adjustable kit Brutality, performance macros and drone latch.", 18, .regular, Palette.secondary)], spacing: 8)
+        let releaseContents = stack([label("02   DIGIRUST", 16, .semibold, Palette.accent), label("Patch, kit, pattern & phrase generators", 21, .semibold), label("Adjustable kit Brutality, performance macros and drone latch.", 18, .regular, Palette.secondary)], spacing: 8)
         inset(releaseContents, in: releaseCard, amount: 20)
         create.primary = true; create.isBordered = false; create.target = self; create.action = #selector(createFile); create.keyEquivalent = "\r"; create.isEnabled = false
         reveal.isBordered = false; reveal.target = self; reveal.action = #selector(revealFile); reveal.isHidden = true
@@ -180,7 +180,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             input = url; fileLabel.stringValue = url.lastPathComponent
             fileHint.stringValue = "Verified official OS 1.12"; fileHint.textColor = Palette.success
             statusTitle.stringValue = "Ready to create"; statusTitle.textColor = Palette.text
-            status.stringValue = "Choose where to save your DigiRust RC17 firmware."
+            status.stringValue = "Choose where to save your DigiRust firmware."
             create.isEnabled = true; bar.doubleValue = 0
         } catch {
             input = nil; create.isEnabled = false; fileLabel.stringValue = "Choose a different firmware file"
@@ -196,8 +196,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     @objc func revealFile() { if let output = savedOutput { NSWorkspace.shared.activateFileViewerSelecting([output]) } }
     @objc func createFile() {
         guard let input = input, let engine = engine, !busy else { return }
-        let panel = NSSavePanel(); panel.allowedFileTypes = ["syx"]; panel.nameFieldStringValue = "Digitone_II_OS1.12_DigiRust_rc17.syx"
-        panel.message = "Save a new DigiRust RC17 firmware file. Existing files are never replaced."
+        let panel = NSSavePanel(); panel.allowedFileTypes = ["syx"]; panel.nameFieldStringValue = "Digitone_II_OS1.12_DigiRust.syx"
+        panel.message = "Save a new DigiRust firmware file. Existing files are never replaced."
         panel.beginSheetModal(for: window) { [weak self] response in
             guard response == .OK, let output = panel.url, let self = self else { return }
             self.setBusy(true); self.reveal.isHidden = true
@@ -208,7 +208,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
                     DispatchQueue.main.async {
                         self.setBusy(false); self.savedOutput = output; self.reveal.isHidden = false
                         self.statusTitle.stringValue = "Your firmware is ready"; self.statusTitle.textColor = Palette.success
-                        self.status.stringValue = "DigiRust RC17 verified and saved. Show in Finder to locate your file."
+                        self.status.stringValue = "DigiRust verified and saved. Show in Finder to locate your file."
                         NSAccessibility.post(element: self.status, notification: .valueChanged)
                     }
                 } catch { DispatchQueue.main.async { self.setBusy(false); self.showError(error) } }
