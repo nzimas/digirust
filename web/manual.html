@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual · DigiRust</title>
+<meta name="description" content="Experimental electronic music tools for Digitone II. Patch your own OS 1.12 locally in your browser. No firmware upload or automatic installation.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="assets/digirust-mark.svg">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<div class="wrap">
+<a class="brand" href="./">
+<img src="assets/digirust-mark.svg" width="42" height="42" alt="">DigiRust</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="patcher.html">Patcher</a>
+<a href="manual.html" aria-current="page">Manual</a>
+<a href="about.html">About</a>
+<a href="https://github.com/nzimas/digirust">GitHub ↗</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-head">
+<p class="eyebrow">RC17 / instrument controls</p>
+<h1>A guide to the generators.</h1>
+<p class="lede">Choose a direction, generate, listen, and keep exploring. These controls live on the Digitone II after installation.</p>
+</div>
+<article class="article">
+<h2>The repeat workflow</h2>
+<p>The SYSTEM menu gains Patch Generator, Pattern Generator, Kit Generator and Phrase Generator. Choose a generator and path. <kbd>YES</kbd> generates while keeping that screen or menu selection available for another result.</p>
+<p>On a percentage-control screen, press <kbd>DATA/LEVEL</kbd> to edit, turn it to adjust, then press again to finish. <kbd>NO</kbd> cancels an active edit; outside editing it returns to the parent menu. DATA never generates.</p>
+<h2>Paths and scope</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>Scope</th>
+<th>Paths and controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patch</td>
+<td>Selected audio track sound; MIDI tracks are refused.</td>
+<td>Abstract, Rhythmic → IDM / Noise, Melodic, Free. Brutality on Abstract, IDM and Noise.</td>
+</tr>
+<tr>
+<td>Kit</td>
+<td>All 16 sounds. MIDI tracks become generated audio tracks.</td>
+<td>Abstract, Rhythmic → IDM / Noise, Melodic, Free. Independent Brutality on IDM and Noise.</td>
+</tr>
+<tr>
+<td>Pattern</td>
+<td>Complete sequence, with tempo and compressor generation.</td>
+<td>Abstract, Rhythmic → IDM / Noise, Melodic. Density on every path; Brutality on IDM and Noise.</td>
+</tr>
+<tr>
+<td>Phrase</td>
+<td>Selected track sequence; other sequences preserved.</td>
+<td>Abstract, Rhythmic, Melodic. No parameter-editing screen or rhythmic submenu in RC17.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Abstract</h3>
+<p>Evolving textures, drones, effects and electroacoustic material. No abstract track has a permanent timbral archetype.</p>
+<h3>Rhythmic</h3>
+<p>IDM favors articulated experimental percussion and glitches. Rhythmic Noise adds harsher synthesis and industrial intensity with purposeful rhythmic structures.</p>
+<h3>Melodic and Free</h3>
+<p>Melodic explores unusual pitched sounds and sequences. Free offers broadly unpredictable sound generation within safeguards; it is available in Patch and Kit only.</p>
+<h2>Density and Brutality</h2>
+<p>Density influences active tracks and note-event population. Brutality shapes source complexity, modulation, drive and reduction in sounds, or the behavior of rhythmic sequences. It is not just a volume control.</p>
+<p>Percentages run from 0–100. Pattern Density starts at 30%; exposed Brutality controls start at 35%. Each tool/path retains its own values during operation; they reset on restart. Percentage bars invert text contrast under the fill.</p>
+<p>Kit generation preserves the sequence and non-sound kit settings, including the compressor. Pattern generation has separate compressor logic. Abstract kits retain fixed 35% sound treatment in RC17; Melodic and Free kit behavior is unchanged.</p>
+<h2>Rhythmic sound roles</h2>
+<p>Tracks 1–8 retain percussion roles, including kick on 1. Tracks 9–12 independently draw abstract roles and families; 13–16 independently draw melodic roles and families. Upper tracks have no permanent bass or lead assignment. Abstract and Melodic patch paths work independently of track position.</p>
+<h2>Control All macros</h2>
+<p>Hold <kbd>TRACK</kbd> and turn an encoder. The macro reaches corresponding parameter positions across every subpage of SYN, FILTER, AMP and FX. Releasing TRACK leaves edits in place; stock <kbd>TRACK</kbd> + <kbd>NO</kbd> undo remains available.</p>
+<h2>Drone latch and Perform Kit</h2>
+<p>With Grid Recording disabled, hold an audio track's live trig first, then tap <kbd>FUNC</kbd>. Release both to retain the gate. Repeat to unlatch; <kbd>STOP</kbd> releases all latches. FUNC-first stock gestures remain intact. Independently decaying sound components can still fade.</p>
+<p>Enable Perform Kit with <kbd>FUNC</kbd> + <kbd>PRESET/KIT</kbd>, sculpt the sound, then exit with the same gesture. Restored parameters reach latched voices without another note-on. Oscillator phase, envelopes and effect tails are not rewound. Generators release active latches before updating content.</p>
+<h2>Further details</h2>
+<p>
+<a href="https://github.com/nzimas/digirust/blob/main/docs/FEATURES.md">Complete feature guide ↗</a> · <a href="https://github.com/nzimas/digirust/blob/main/RC17-Features.md">RC17 release details ↗</a>
+</p>
+</article>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div>DigiRust © nzimas · MIT license<br>Independent project. Digitone II only.<br>Not affiliated with or endorsed by Elektron.</div>
+<div class="footer-links">
+<a href="about.html#risk">Disclaimer</a>
+<a href="assets/licenses/DigiRust-MIT.txt">License</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">macOS patcher</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

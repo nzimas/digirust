@@ -1,0 +1,24 @@
+{
+  "reportDate": "2026-10-13",
+  "webVersion": "1.0.0",
+  "firmwareTarget": "RC17",
+  "testsPassed": 24,
+  "nativeCodecParityCases": 7,
+  "completeOutputByteExact": true,
+  "outputBytes": 2483616,
+  "outputSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "browserUI": {
+    "stockIdentityChecked": true,
+    "explicitCreateAndDownloadPassed": true,
+    "downloadHashMatched": true,
+    "cancellationPassed": true,
+    "desktopLayoutChecked": true,
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": false
+  },
+  "instrumentAccessed": false,
+  "limitations": [
+    "Browser UI tested in the Codex in-app browser on this Apple Silicon Mac; other browser/device combinations not exhaustively tested",
+    "Existing firmware hardware-test statement is developer-reported, not new device validation by the web port"
+  ]
+}

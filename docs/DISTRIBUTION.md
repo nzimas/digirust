@@ -1,6 +1,6 @@
 # Distribution, attribution and licensing
 
-DigiRust is distributed as a macOS patcher and patcher source. Users supply their own exact official Digitone II OS 1.12. Neither the repository nor release archives provide complete stock or modified firmware.
+DigiRust is distributed as a browser-local patcher, a macOS app and patcher source. Users supply their own exact official Digitone II OS 1.12. Neither the repository nor release archives provide complete stock or modified firmware.
 
 The shipped recipe and modification additions are necessary for local patching. This is not a source distribution of the full generator firmware development environment. Known stock-derived sound templates and displaced instruction blocks are sourced from the user's input rather than bundled as complete templates; see `Resources/provenance-audit.json`.
 
@@ -14,8 +14,10 @@ The project's musical direction is the author's: tools for edgier experimental e
 
 ## Publication boundary
 
-Included: patcher source, recipe/additions, artwork, required notices, documentation, selected JSON validation summaries and a compiled patcher release.
+Included: both patcher implementations, the static GitHub Pages website, recipe/additions, artwork, required notices, documentation, selected JSON validation summaries, codec test source and a compiled macOS patcher release.
 
 Excluded: official or generated `.syx` files, decrypted firmware sections, complete MAIN images, firmware research sources and dumps, instrument data, local test fixtures, temporary directories, credentials and full private emulator evidence.
 
 Read the [Digitone II-only, warranty and use-at-your-own-risk disclaimer](../DISCLAIMER.md) before using the patcher or installing its output.
+
+The browser codec/transport implementation is a JavaScript port of the bundled MIT-licensed format tool. Its notice and license remain in `Vendor/`; the site also serves the applicable license texts. All firmware-derived material needed for checksum key derivation is read from the user-supplied input at runtime. No complete firmware or derived hardware keys are hosted.

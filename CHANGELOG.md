@@ -1,5 +1,13 @@
 # Changes
 
+## Browser website — 13 October 2026
+
+- GitHub Pages site with browser patcher, demo, manual and disclaimer.
+- JavaScript port of the existing firmware-format tool and level-0 compressor; exact RC17 output verified.
+- Local worker processing, pinned resources, explicit download and cancellation. No firmware upload, MIDI access or installation.
+- Native/browser codec parity tests and automated static publication/deployment checks.
+- RC17 firmware behavior and DigiRust 1.2.0 macOS target remain unchanged.
+
 ## DigiRust 1.2.0 — RC17 target
 
 - First patcher-only GitHub publication.

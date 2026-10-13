@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About and disclaimer · DigiRust</title>
+<meta name="description" content="Experimental electronic music tools for Digitone II. Patch your own OS 1.12 locally in your browser. No firmware upload or automatic installation.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="assets/digirust-mark.svg">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<div class="wrap">
+<a class="brand" href="./">
+<img src="assets/digirust-mark.svg" width="42" height="42" alt="">DigiRust</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="patcher.html">Patcher</a>
+<a href="manual.html">Manual</a>
+<a href="about.html" aria-current="page">About</a>
+<a href="https://github.com/nzimas/digirust">GitHub ↗</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-head">
+<p class="eyebrow">Scope / evidence / responsibility</p>
+<h1>About DigiRust.</h1>
+<p class="lede">An independent project for the experimental side of electronic music.</p>
+</div>
+<article class="article">
+<h2>Musical direction</h2>
+<p>IDM, rhythmic noise, industrial, electroacoustic and acousmatic music guide the author's tools. Unusual sounds, textures and varied structures matter alongside rhythm. Conventional groovebox workflows and mainstream beatmaking are outside the project's design scope.</p>
+<h2>Developer hardware report</h2>
+<p>The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. This report was supplied on 12 October 2026.</p>
+<p>This is a factual report of experience on that instrument. It is not encouragement to install, an endorsement, a safety guarantee or a prediction of results on another instrument.</p>
+<h2>Verification</h2>
+<p>The browser patcher checks the exact official input, pinned patch resources, stock and modified MAIN hashes, compression round-trip, protected section bytes and the complete output SHA-256. It must produce the same RC17 image as the macOS patcher.</p>
+<p>The firmware's recorded development tests include host/CPU parity, stock codecs, menu and control checks, and exact-package emulated boot and front-panel execution. These checks do not establish every possible hardware or musical outcome. <a href="https://github.com/nzimas/digirust/blob/main/docs/VALIDATION.md">Read the evidence and limits ↗</a>.</p>
+<h2 id="risk">Important disclaimer</h2>
+<div class="warning">
+<strong>DIGITONE II ONLY. USE ENTIRELY AT YOUR OWN RISK. INSTALLING MODIFIED FIRMWARE MAY VOID YOUR MANUFACTURER WARRANTY.</strong>
+</div>
+<p>DigiRust is only for the Elektron Digitone II using the exact supported official OS 1.12. Do not install the output on the original Digitone, Digitone Keys, Digitakt, Syntakt, Model:Cycles, Model:Samples or any other instrument.</p>
+<p>This is unofficial modified firmware, not approved, supported or endorsed by Elektron. Proceed on the assumption that modification-related damage or malfunction will not be covered by manufacturer warranty or support. Actual coverage depends on applicable terms and law; this project cannot waive statutory consumer rights.</p>
+<p>Creating, transferring and operating modified firmware are entirely at your own risk. Possible consequences include data loss, unexpected output, crashes, failed updates, inability to start, loss of normal operation and an unusable or irreversibly bricked instrument. Repair or replacement may be required at your expense.</p>
+<p>No successful installation, recovery or future compatibility is guaranteed. Keep the official firmware available and consult Elektron's current instructions before deciding to transfer. Recovery tested on a healthy instrument is not a guarantee after every failure.</p>
+<p>The software is provided AS IS, without warranty. To the extent permitted by law, the author, contributors and copyright holders accept no liability for consequences of its use. <strong>If you do not accept these risks, do not install the generated firmware.</strong>
+</p>
+<p>
+<a href="https://github.com/nzimas/digirust/blob/main/DISCLAIMER.md">Full disclaimer ↗</a> · <a href="https://www.elektronauts.com/t/elektronauts-topics-and-comments-regarding-modified-firmware/255891">Elektron's statement ↗</a>
+</p>
+<h2>Privacy</h2>
+<p>The patcher processes the selected file in browser memory. It does not upload firmware, connect to instruments, request MIDI access or send telemetry. GitHub Pages serves the site and its patch resources. The demo connects to YouTube only when you press play.</p>
+<h2>License and distribution</h2>
+<p>DigiRust-authored material is MIT licensed. Elektron proprietary firmware is not covered by that grant; third-party licenses remain applicable. Only the patcher and modification resources are distributed, never a complete stock or modified firmware image.</p>
+<p>The browser format/codec port derives from the bundled MIT-licensed firmware tool by Marcel Bierling. Modification additions retain the GCC runtime notices. <a href="assets/licenses/DigiRust-MIT.txt">DigiRust MIT license</a> · <a href="assets/licenses/firmware-tool-MIT.txt">Format tool license</a> · <a href="assets/licenses/GCC-GPL.txt">GCC GPLv3</a> · <a href="assets/licenses/GCC-Runtime-Exception.txt">Runtime exception</a>
+</p>
+<h2>Versions</h2>
+<p>The browser app creates RC17 from official OS 1.12. Patcher versions are separate from firmware revisions; the instrument's internal OS remains 1.12. The existing DigiRust 1.2.0 macOS app is also available.</p>
+<p>
+<a href="https://github.com/nzimas/digirust">Source repository ↗</a> · <a href="https://github.com/nzimas/digirust/blob/main/CHANGELOG.md">Changelog ↗</a>
+</p>
+</article>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div>DigiRust © nzimas · MIT license<br>Independent project. Digitone II only.<br>Not affiliated with or endorsed by Elektron.</div>
+<div class="footer-links">
+<a href="about.html#risk">Disclaimer</a>
+<a href="assets/licenses/DigiRust-MIT.txt">License</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">macOS patcher</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

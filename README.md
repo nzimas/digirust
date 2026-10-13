@@ -1,6 +1,6 @@
 # DigiRust
 
-**Experimental firmware tools for the Elektron Digitone II, distributed as a macOS patcher.**
+**Experimental firmware tools for the Elektron Digitone II, with a browser-based patcher and a macOS app.**
 
 > **DIGITONE II ONLY — USE AT YOUR OWN RISK. Installing modified firmware may void your manufacturer warranty. It can render your instrument unusable; recovery is not guaranteed. Do not install it on any other machine. Read the [full disclaimer](DISCLAIMER.md) before use.**
 
@@ -8,7 +8,7 @@ DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousma
 
 This is the author's musical direction, and the tools offered here follow it. Conventional groovebox workflows, mainstream beatmaking and hip-hop beat generation are outside the project's design goals. The aim is to explore, sculpt and perform edgier electronic music.
 
-**Only the patcher is distributed. No complete stock or modified Elektron firmware is provided.** You supply the supported official OS file; DigiRust creates a modified copy locally. The app does not connect to or update an instrument.
+**Only the patcher and modification resources are distributed. No complete stock or modified Elektron firmware is provided.** You supply the supported official OS file; DigiRust creates a modified copy locally in your browser or the macOS app. Neither connects to or updates an instrument.
 
 ## DigiRust demo
 
@@ -16,7 +16,13 @@ This is the author's musical direction, and the tools offered here follow it. Co
 
 [Watch the DigiRust demo on YouTube](https://www.youtube.com/shorts/BoazPrfJgIs).
 
-## Download
+## Website and browser patcher
+
+[Visit DigiRust](https://nzimas.github.io/digirust/) · [Open the browser patcher](https://nzimas.github.io/digirust/patcher.html) · [Online manual](https://nzimas.github.io/digirust/manual.html)
+
+The website includes the patcher, demo, manual and disclaimer. Firmware is processed in a background worker on your device and is never uploaded. The browser output is byte-identical to RC17 from the macOS app. No browser MIDI access or automatic installation is implemented.
+
+## macOS download
 
 [Download DigiRust 1.2.0 for macOS](https://github.com/nzimas/digirust/releases/tag/v1.2.0) · [All releases](https://github.com/nzimas/digirust/releases)
 
@@ -52,12 +58,14 @@ See the [complete feature and control guide](docs/FEATURES.md) and [RC17 release
 ## Create your firmware copy
 
 1. Obtain the official **Digitone II OS 1.12** from Elektron and extract its download archive. Use your own official `.syx` file; an already modified image is rejected.
-2. Extract the DigiRust macOS release archive and open `DigiRust.app`.
-3. Choose or drop the stock firmware file. DigiRust verifies that it is the exact supported input.
-4. Choose **Create patched firmware…** and a new local destination. Wait for **DigiRust RC17 verified and saved**.
-5. The default output filename is `Digitone_II_OS1.12_DigiRust_rc17.syx`.
+2. Open the [browser patcher](https://nzimas.github.io/digirust/patcher.html) in a current browser over HTTPS, with Web Crypto and Web Workers enabled.
+3. Choose or drop the official firmware. DigiRust checks that it is the exact supported file.
+4. Read the disclaimer, acknowledge the warning and choose **Create firmware copy**. You can cancel while it runs.
+5. When verification succeeds, choose **Download verified RC17 firmware**. The filename is `Digitone_II_OS1.12_DigiRust_rc17.syx`.
 
-Existing files and the stock input are never overwritten. Use a local filesystem with hard-link support, such as APFS or HFS+. No Python, Homebrew or compiler is required to use the released app.
+Your original file is unchanged. Browser saving follows your browser's download behavior. No Python, Homebrew or compiler is required. The site's patch resources need a network connection; your firmware itself stays in browser memory. YouTube is loaded only if you choose to play the demo.
+
+The [macOS app](https://github.com/nzimas/digirust/releases/tag/v1.2.0) remains available. Choose/drop the same official file, select **Create patched firmware…** and a new local destination, then wait for verification. The macOS app never overwrites existing files and requires a filesystem with hard-link support, such as APFS/HFS+.
 
 **Creating the file does not install it.** Device transfer is a separate, deliberate operation outside this patcher. Read the [validation and recovery limits](docs/VALIDATION.md) before deciding whether to install a generated image. Follow Elektron's documentation for your instrument and keep the official firmware available. No recovery procedure can be guaranteed by this project's local tests.
 
@@ -70,13 +78,14 @@ This records the developer's experience on that instrument. It is a factual repo
 ## Documentation
 
 - [Features, paths, track roles and performance controls](docs/FEATURES.md)
+- [Browser architecture, tests and GitHub Pages deployment](docs/WEB.md)
 - [Build from source and command-line use](docs/BUILD.md)
 - [Validation evidence, integrity hashes and limitations](docs/VALIDATION.md)
 - [Distribution contents, attribution and licensing](docs/DISTRIBUTION.md)
 - [Changes and version numbering](CHANGELOG.md)
 - [MIT License](LICENSE), [important disclaimer](DISCLAIMER.md) and [third-party notices](NOTICE.md)
 
-This repository contains the patcher implementation, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. Building this repository rebuilds the macOS patcher for the pinned RC17 target.
+This repository contains both patcher implementations, the static website, a pinned COPY/ADD patch recipe, modification additions, artwork and the bundled format tool. It does **not** contain the complete firmware development/research tree or a generator firmware source build system. The macOS build rebuilds the native app for the pinned RC17 target; the web preparation step stages the same resources for the browser patcher.
 
 Independent project; not affiliated with or endorsed by Elektron. Modified firmware is experimental. Local integrity and emulator checks do not establish hardware safety or sound quality for every possible generated result.
 

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browser patcher · DigiRust</title>
+<meta name="description" content="Experimental electronic music tools for Digitone II. Patch your own OS 1.12 locally in your browser. No firmware upload or automatic installation.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="assets/digirust-mark.svg">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<div class="wrap">
+<a class="brand" href="./">
+<img src="assets/digirust-mark.svg" width="42" height="42" alt="">DigiRust</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="patcher.html" aria-current="page">Patcher</a>
+<a href="manual.html">Manual</a>
+<a href="about.html">About</a>
+<a href="https://github.com/nzimas/digirust">GitHub ↗</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-head">
+<p class="eyebrow">Local processing / RC17</p>
+<h1>Create your DigiRust firmware.</h1>
+<p class="lede">Start with your official Digitone II OS 1.12. The patcher works in this browser; your firmware is never uploaded.</p>
+</div>
+<div class="patch-layout">
+<section class="patch-card" aria-label="Firmware patcher">
+<div class="step-label">
+<span>01</span> Choose official OS 1.12</div>
+<div class="drop" id="drop">
+<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+<path d="M12 5h16l9 9v28H12zM28 5v10h9M24 34V21m-6 6 6-6 6 6"/>
+</svg>
+<div class="file-name" id="file-name">Drop your official .syx file here</div>
+<div class="small" id="file-hint">Extract the Elektron download first. ZIP files are not supported.</div>
+<button class="button secondary" id="choose" type="button">Choose firmware file…</button>
+<input id="firmware" type="file" accept=".syx" hidden>
+</div>
+<hr class="separator">
+<div class="step-label">
+<span>02</span> Review before creating</div>
+<div class="warning">
+<strong>Digitone II only · Use at your own risk</strong>
+<p>Modified firmware may void your warranty and can render the instrument unusable. There is no guaranteed recovery. <a href="about.html#risk">Read the full disclaimer.</a>
+</p>
+</div>
+<p>
+</p>
+<label class="ack">
+<input id="ack" type="checkbox">
+<span>I have read the disclaimer and understand that this file is for the Digitone II only, with installation at my own risk.</span>
+</label>
+<div class="patch-buttons">
+<button class="button" id="create" disabled type="button">Create firmware copy</button>
+<button class="button secondary" id="cancel" hidden type="button">Cancel</button>
+</div>
+<section id="status" class="status" role="status" aria-live="polite" aria-atomic="true">
+<h3 id="status-title">Ready when you are.</h3>
+<p id="status-text">Choose the official file to check its identity.</p>
+<progress id="progress" max="100" value="0" aria-label="Firmware patching progress" hidden>
+</progress>
+</section>
+<a class="button" id="download" download="Digitone_II_OS1.12_DigiRust_rc17.syx" hidden>Download verified RC17 firmware ↓</a>
+<noscript>
+<p>JavaScript is required for the browser patcher. The macOS patcher is also available from GitHub Releases.</p>
+</noscript>
+</section>
+<aside>
+<div class="patch-card">
+<p class="eyebrow">What you will get</p>
+<h3>DigiRust RC17</h3>
+<p>Patch, kit, phrase and pattern generators; Density and Brutality controls; Control All macros; live latch and Perform restoration.</p>
+<div class="facts">
+<strong>Instrument</strong>
+<span>Digitone II only</span>
+</div>
+<div class="facts">
+<strong>Official input</strong>
+<span>OS 1.12</span>
+</div>
+<div class="facts">
+<strong>Internal OS</strong>
+<span>Remains 1.12</span>
+</div>
+<p class="small">Your original file is unchanged. Only the exact supported stock file is accepted. The final download must match the verified RC17 hash.</p>
+<details>
+<summary>Output SHA-256</summary>
+<p class="hash">9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda</p>
+</details>
+<details>
+<summary>Privacy and processing</summary>
+<p>Your selected file is read into browser memory and processed in a background worker. It is not sent to GitHub, the developer or another server. The site downloads its own patch resources. No MIDI access, device connection or telemetry is implemented.</p>
+</details>
+<details>
+<summary>After downloading</summary>
+<p>File verification is not a guarantee of hardware safety. Review the <a href="about.html#risk">risk and recovery limits</a> before making a separate decision to transfer it to your instrument.</p>
+</details>
+<p class="small">
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">Prefer the macOS app? Download it here ↗</a>
+</p>
+</div>
+</aside>
+</div>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div>DigiRust © nzimas · MIT license<br>Independent project. Digitone II only.<br>Not affiliated with or endorsed by Elektron.</div>
+<div class="footer-links">
+<a href="about.html#risk">Disclaimer</a>
+<a href="assets/licenses/DigiRust-MIT.txt">License</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">macOS patcher</a>
+</div>
+</div>
+</footer>
+<script type="module" src="app.mjs">
+</script>
+</body>
+</html>

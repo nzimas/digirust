@@ -1,6 +1,10 @@
 # Build and command-line use
 
-## Build the patcher
+## Browser website
+
+The static website is in `web/`. Run `python3 tools/build_web.py` to synchronize the pinned patch resources and license texts, then serve that directory locally. See [WEB.md](WEB.md) for tests and GitHub Pages deployment. No npm dependencies or WebAssembly compiler are needed.
+
+## Build the macOS patcher
 
 On macOS with Apple's Xcode command-line tools installed:
 
@@ -49,6 +53,8 @@ To test reconstruction locally, use your own supported official firmware and com
 | `Artwork/` | Source code for the app icon |
 | `docs/` | User, build, validation and distribution documentation |
 | `validation/` | JSON summaries from local RC17 and patcher tests |
-| `tools/` | Publication audit and release packager |
+| `tools/` | Publication audit, website preparation and release packager |
+| `web/` | GitHub Pages site and browser-local patcher |
+| `tests/` | Native C / browser codec parity and patcher tests |
 
 No firmware download, MIDI access, telemetry or automatic deployment is implemented.

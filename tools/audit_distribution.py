@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib, json, re
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DIRS = ('Sources', 'Resources', 'Vendor', 'Artwork', 'docs', 'validation', 'tools', '.github')
+PUBLIC_DIRS = ('Sources', 'Resources', 'Vendor', 'Artwork', 'docs', 'validation', 'tools', '.github', 'web', 'tests')
 PUBLIC_FILES = ('README.md', 'NOTICE.md', 'RC17-Features.md', 'CHANGELOG.md', 'LICENSE', 'DISCLAIMER.md', 'build.sh', '.gitignore')
 FORBIDDEN = {'.syx', '.elf', '.o', '.snap', '.dat', '.log'}
 # Complete known stock/generated transport and MAIN images, never publication assets.
@@ -27,6 +27,9 @@ def audit():
  for p in files:
   assert p.exists() and not p.is_symlink(), p
   check_asset(str(p.relative_to(ROOT)), p.read_bytes())
+ for name in ['firmware-patch.json', 'additions.bin']:
+  web = ROOT / 'web/assets' / name
+  if web.exists(): assert web.read_bytes() == (ROOT / 'Resources' / name).read_bytes(), name
  pins = (ROOT / 'Sources/Pins.swift').read_text()
  for symbol, name in [('recipePin', 'firmware-patch.json'), ('additionsPin', 'additions.bin')]:
   pin = re.search(symbol + r' = "([0-9a-f]{64})"', pins).group(1)
