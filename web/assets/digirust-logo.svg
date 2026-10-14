@@ -1,38 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="DigiRust">
-<g stroke-linejoin="miter">
-  <!-- Three interlocked structural sections, with recessed faces and cut terminals. -->
-  <path d="M80 5 145 42v18l-15-8V50L80 21 30 50v2l-15 8V42Z" fill="#28466f"/>
-  <path d="M15 65 30 56v49l50 29 50-29V56l15 9v49l-65 38-65-38Z" fill="#213957"/>
-  <path d="m80 21 50 29-16 9-34-20-34 20-16-9Z" fill="#a5c5ff"/>
-  <path d="m80 39 34 20v18L80 57 46 77V59Z" fill="#527cb9"/>
-  <path d="m35 53 25 14v33l20 12v29L35 115Z" fill="#759de0"/>
-  <path d="m35 53 25 14-16 9-25-14Z" fill="#b8d2ff"/>
-  <path d="m19 62 25 14v48l-25-15Z" fill="#2c4a77"/>
-  <path d="m60 100 20 12-16 9-20-12V76l16-9Z" fill="#1b2e49"/>
-  <path d="m125 53-25 14v33l-20 12v29l45-26Z" fill="#426ba9"/>
-  <path d="m125 53-25 14 16 9 25-14Z" fill="#a5c5ff"/>
-  <path d="m141 62-25 14v48l25-15Z" fill="#6993d1"/>
-  <path d="m100 100-20 12 16 9 20-12V76l-16-9Z" fill="#243d60"/>
-  <!-- Central aperture and the three bridges crossing the inner assembly. -->
-  <path d="m80 60 16 9v19l-16 10-16-10V69Z" fill="#06070a" stroke="#91b6f6" stroke-width="1.5"/>
-  <path d="m64 74 16-9 16 9-16 9Z" fill="#33547c"/>
-  <path d="m64 74 16 9v15L64 88Z" fill="#8db4ff"/>
-  <path d="m96 74-16 9v15l16-10Z" fill="#426ca7"/>
-  <path d="m80 65 7 4-7 4-7-4Z" fill="#d4e3ff"/>
-  <!-- Inset seams establish the folded construction without relying on gradients. -->
-  <g fill="none" stroke="#c3d8ff" stroke-width="1.2">
-    <path d="m80 26 41 24-10 6M80 43l-27 16v11M24 67l15 9v39M39 58l16 10v33l19 11M121 58l-16 10v33l-19 11M136 67l-15 9v39"/>
-  </g>
-  <g fill="none" stroke="#6d99df" stroke-width="1">
-    <path d="M80 9 139 44M21 44l40-23M21 106l9 5M130 111l9-5M80 140v6M80 45v9M49 118l19 11M92 129l19-11"/>
-  </g>
-  <!-- Small polygonal fasteners and recessed slots. -->
-  <g fill="#b3cdff">
-    <path d="m36 40 4-2 3 2-4 3Zm81 0 3-2 4 2-3 3ZM25 89l3 2v5l-3-2Zm107 2 3-2v5l-3 2ZM69 131l4 2v5l-4-2Zm18 2 4-2v5l-4 2Z"/>
-  </g>
-  <g fill="#101c30">
-    <path d="m57 39 4-2 15 9-4 2Zm27 7 15-9 4 2-15 9ZM48 87l5 3v14l-5-3Zm59 3 5-3v14l-5 3Z"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 160" role="img" aria-label="DigiRust">
+<g fill="none" stroke="#8db4ff" stroke-linejoin="miter" stroke-linecap="square">
+  <!-- Planar cut rails: no shaded faces, perspective, gradients or extrusion. -->
+  <path stroke-width="4" d="M16 52V18h39M65 18h45l34 34v21M144 87v22l-34 33H65M55 142H16v-39"/>
+  <path stroke-width="8" d="M30 38h52l26 26v32l-26 26H30V38Z"/>
+  <path stroke-width="4" d="M42 50h35l19 19v22l-19 19H42V50Z"/>
+  <path stroke-width="7" d="M120 38v31l-27 27 30 30M120 79h15M120 52h15"/>
+  <path stroke-width="4" d="M56 64h26v32H56V64ZM68 64v-9M68 96v9M56 80H45M82 80h9"/>
+  <path stroke-width="2" d="M6 66h12v26H6M126 18v10h18M126 142v-10h18M32 12v-6h31M32 148v6h31"/>
+  <path stroke-width="2" d="M103 31l7-7 20 20-7 7M103 129l7 7 20-20-7-7M23 57v18M23 85v18"/>
 </g>
-<text x="188" y="103" fill="#eef3f5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="76" font-weight="600" letter-spacing="-3">DigiRust</text>
+<g fill="#8db4ff">
+  <path d="M13 79h6v6h-6ZM53 15h6v6h-6ZM53 139h6v6h-6ZM117 76h6v6h-6ZM65 76h8v8h-8Z"/>
+  <path d="M36 26h13v3H36ZM36 131h13v3H36ZM132 58h3v11h-3ZM132 91h3v11h-3Z"/>
+</g>
+<!-- Custom drawn lettering. All glyphs are paths; no font dependency. -->
+<g fill="#eef3f5" fill-rule="evenodd">
+<path aria-hidden="true" transform="translate(194 38)" d="M0 0H42L58 16V68L42 84H0V0ZM13 13V71H36L45 62V22L36 13H13Z"/>
+<path aria-hidden="true" transform="translate(264 38)" d="M0 0H40V12H26V38H12V12H0V0ZM12 44H26V72H40V84H0V72H12V44Z"/>
+<path aria-hidden="true" transform="translate(316 38)" d="M60 16 44 0H16L0 16V68L16 84H60V42H32V54H47V71H22L13 62V22L22 13H38L47 22V28H60V16Z"/>
+<path aria-hidden="true" transform="translate(388 38)" d="M0 0H40V12H26V38H12V12H0V0ZM12 44H26V72H40V84H0V72H12V44Z"/>
+<path aria-hidden="true" transform="translate(440 38)" d="M0 0H44L60 16V36L46 50 64 84H49L31 51H13V84H0V0ZM13 13V38H38L47 29V22L38 13H13Z"/>
+<path aria-hidden="true" transform="translate(516 38)" d="M0 0H13V62L22 71H38L47 62V0H60V68L44 84H16L0 68V0Z"/>
+<path aria-hidden="true" transform="translate(588 38)" d="M60 0H16L0 16V35L13 48H38L47 57V62L38 71H0V84H44L60 68V52L44 36H22L13 27V22L22 13H60V0Z"/>
+<path aria-hidden="true" transform="translate(660 38)" d="M0 0H60V13H37V84H23V13H0V0Z"/>
+</g>
 </svg>

@@ -33,7 +33,7 @@ li { margin-bottom: 10px; }
 .header { border-bottom: 1px solid var(--line); }
 .header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 88px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 23px; }
-.brand img { width: 48px; height: 48px; }
+.brand img { width: 220px; height: auto; }
 .nav { display: flex; gap: 25px; flex-wrap: wrap; font-size: 17px; }
 .nav a { text-decoration: none; color: var(--muted); }
 .nav [aria-current=page], .nav a:hover { color: var(--accent); }

@@ -68,10 +68,10 @@ final class RustButton: NSButton {
         }
     }
 }
-final class RustMark: NSView {
+final class RustWordmark: NSView {
     override func draw(_ dirtyRect: NSRect) {
         guard let context = NSGraphicsContext.current?.cgContext else { return }
-        drawDigiRustEmblem(context, in: bounds)
+        drawDigiRustWordmark(context, in: bounds)
     }
 }
 final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
@@ -101,12 +101,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.titlebarAppearsTransparent = true; window.backgroundColor = Palette.canvas
         window.appearance = NSAppearance(named: .darkAqua)
         let view = window.contentView!
-        let mark = RustMark(); mark.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([mark.widthAnchor.constraint(equalToConstant: 58), mark.heightAnchor.constraint(equalToConstant: 58)])
-        let brand = stack([label("DigiRust", 34, .bold), label("Firmware patcher for Digitone II", 18, .regular, Palette.secondary)], spacing: 4)
+        let mark = RustWordmark(); mark.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([mark.widthAnchor.constraint(equalToConstant: 220), mark.heightAnchor.constraint(equalToConstant: 47)])
+        let brand = stack([mark, label("Firmware patcher for Digitone II", 18, .regular, Palette.secondary)], spacing: 4)
         let badge = label("OS 1.12", 18, .semibold, Palette.accent); badge.setAccessibilityLabel("Based on official OS 1.12")
         let spacer = NSView(); spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        let header = stack([mark, brand, spacer, badge], vertical: false, spacing: 18)
+        let header = stack([brand, spacer, badge], vertical: false, spacing: 18)
         let separator = NSBox(); separator.boxType = .separator
         let intro = stack([label("Create your DigiRust firmware", 26, .semibold), label("Start with official OS 1.12. Save a patched copy.", 19, .regular, Palette.secondary)], spacing: 7)
         let fileCard = Card()

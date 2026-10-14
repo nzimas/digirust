@@ -1,5 +1,11 @@
 # Changes
 
+## Flat logo and custom lettering
+
+- Replaced the faceted emblem with single-colour planar geometry.
+- Drew custom stencil lettering as vector paths, without a system-font dependency.
+- Applied the full wordmark to the website header and homepage; retained blue on black.
+
 ## Logo and colour revision
 
 - Replaced the D/R monogram with a detailed interlocking geometric emblem.

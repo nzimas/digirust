@@ -58,3 +58,7 @@ The repository name determines the lowercase `/digirust/` path. Every internal s
 ## Limits
 
 The web port changes packaging and delivery, not firmware behavior. Exact hashes establish equality to the existing candidate, not hardware safety. Browser UI was exercised in the Codex in-app browser on this Apple Silicon Mac; all browser/device combinations have not been tested. Warranty and use-at-your-own-risk notices remain applicable.
+
+## Logo assets
+
+The flat emblem and custom letter outlines are in `web/assets/digirust-mark.svg` and `web/assets/digirust-logo.svg`. They contain vector paths, with no font or raster dependency. After editing these assets, run `python3 tools/sync_brand.py` to regenerate `Sources/Brand.swift`, then rebuild the macOS app to synchronize its icon and header.
