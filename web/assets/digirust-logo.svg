@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 80" role="img" aria-label="DigiRust">
+  <path fill="#87d9e8" fill-rule="evenodd" d="M8 12h20l12 12v32L28 68H8V12zm8 8v40h9l7-7V27l-7-7h-9zM44 12h18l10 10v14L61 47l13 21H64L51 47h-7V12zm8 8v19h6l6-6v-7l-6-6h-6zM44 48h8v20h-8z"/>
+  <text x="98" y="61" fill="#eef3f5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="58" font-weight="600" letter-spacing="-2">DigiRust</text>
+</svg>

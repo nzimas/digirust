@@ -14,10 +14,10 @@ async function start(file,action){
     worker.onmessage=({data})=>{
       if(request!==token)return;
       if(data.type==='progress'){status(data.text,'Keep this tab open. You can cancel at any time.','',data.value);return;}
-      if(data.type==='valid'){valid=true;$('file-hint').textContent='Verified official Digitone II OS 1.12';stop();status('Official OS 1.12 verified','Review the warning below, then create your DigiRust firmware copy.');return;}
+      if(data.type==='valid'){valid=true;$('file-hint').textContent='Verified official Digitone II OS 1.12';stop();status('Official OS 1.12 verified','Input SHA-256 matches the supported OS 1.12. Review the disclaimer before patching.');return;}
       if(data.type==='done'){
         url=URL.createObjectURL(new Blob([data.bytes],{type:'application/octet-stream'}));download.href=url;download.hidden=false;
-        stop();status('Your firmware is ready','The complete DigiRust file passed verification. Download it below. Installation is a separate decision.','success',100);download.focus();return;
+        stop();status('Firmware verified','Output SHA-256 verified. The download is available. Installation is separate.','success',100);download.focus();return;
       }
       valid=action==='patch';stop();status('No output created',data.text,'error');
     };
@@ -25,9 +25,9 @@ async function start(file,action){
     worker.postMessage({action,bytes},[bytes]);
   }catch(e){if(request!==token)return;valid=false;stop();status('No output created',e.message,'error');}
 }
-function select(file){if(!file||busy)return;selected=file;valid=false;ack.checked=false;$('file-name').textContent=file.name;$('file-hint').textContent='Checking file identity on this device…';status('Checking your file','Your file stays on this device.');start(file,'validate');}
+function select(file){if(!file||busy)return;selected=file;valid=false;ack.checked=false;$('file-name').textContent=file.name;$('file-hint').textContent='Checking file identity on this device…';status('Verifying input','Computing the input SHA-256 locally.');start(file,'validate');}
 choose.onclick=()=>input.click();input.onchange=()=>select(input.files[0]);ack.onchange=controls;
-create.onclick=()=>{if(!selected||!valid||!ack.checked||busy)return;status('Creating your firmware','Processing locally in your browser.');start(selected,'patch');};
+create.onclick=()=>{if(!selected||!valid||!ack.checked||busy)return;status('Patching firmware','Applying the patch locally.');start(selected,'patch');};
 cancel.onclick=()=>{stop();clearDownload();status('Cancelled','This attempt was cancelled. You can start again.');};
 drop.ondragover=e=>{e.preventDefault();if(!busy)drop.classList.add('drag');};drop.ondragleave=()=>drop.classList.remove('drag');
 drop.ondrop=e=>{e.preventDefault();drop.classList.remove('drag');if(e.dataTransfer.files.length!==1){clearDownload();valid=false;selected=null;controls();status('Choose one file','Drop a single official OS 1.12 .syx file.','error');return;}select(e.dataTransfer.files[0]);};

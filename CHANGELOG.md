@@ -1,5 +1,12 @@
 # Changes
 
+## Website presentation
+
+- Reduced homepage text and replaced promotional copy with technical descriptions.
+- Removed decorative pre-titles from every page.
+- Added a geometric D/R logo and wordmark; changed the website accent to cyan.
+- Firmware, patch resources and patching behavior are unchanged.
+
 ## Browser website — 13 October 2026
 
 - GitHub Pages site with browser patcher, demo, manual and disclaimer.

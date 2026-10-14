@@ -27,14 +27,13 @@
 </header>
 <main id="main" class="wrap">
 <div class="page-head">
-<p class="eyebrow">Local processing / DigiRust</p>
-<h1>Create your DigiRust firmware.</h1>
-<p class="lede">Start with your official Digitone II OS 1.12. The patcher works in this browser; your firmware is never uploaded.</p>
+<h1>Firmware patcher</h1>
+<p class="lede">Input: official Digitone II OS 1.12. Output: DigiRust firmware. Processing is local; the file is not uploaded.</p>
 </div>
 <div class="patch-layout">
 <section class="patch-card" aria-label="Firmware patcher">
 <div class="step-label">
-<span>01</span> Choose official OS 1.12</div>
+Stock firmware</div>
 <div class="drop" id="drop">
 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 <path d="M12 5h16l9 9v28H12zM28 5v10h9M24 34V21m-6 6 6-6 6 6"/>
@@ -46,7 +45,7 @@
 </div>
 <hr class="separator">
 <div class="step-label">
-<span>02</span> Review before creating</div>
+Disclaimer</div>
 <div class="warning">
 <strong>Digitone II only · Use at your own risk</strong>
 <p>Modified firmware may void your warranty and can render the instrument unusable. There is no guaranteed recovery. <a href="about.html#risk">Read the full disclaimer.</a>
@@ -63,8 +62,8 @@
 <button class="button secondary" id="cancel" hidden type="button">Cancel</button>
 </div>
 <section id="status" class="status" role="status" aria-live="polite" aria-atomic="true">
-<h3 id="status-title">Ready when you are.</h3>
-<p id="status-text">Choose the official file to check its identity.</p>
+<h3 id="status-title">No file selected</h3>
+<p id="status-text">Select the official .syx file to verify its SHA-256.</p>
 <progress id="progress" max="100" value="0" aria-label="Firmware patching progress" hidden>
 </progress>
 </section>
@@ -75,7 +74,6 @@
 </section>
 <aside>
 <div class="patch-card">
-<p class="eyebrow">What you will get</p>
 <h3>DigiRust</h3>
 <p>Patch, kit, phrase and pattern generators; Density and Brutality controls; Control All macros; live latch and Perform restoration.</p>
 <div class="facts">
@@ -104,7 +102,7 @@
 <p>File verification is not a guarantee of hardware safety. Review the <a href="about.html#risk">risk and recovery limits</a> before making a separate decision to transfer it to your instrument.</p>
 </details>
 <p class="small">
-<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">Prefer the macOS app? Download it here ↗</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">macOS patcher download</a>
 </p>
 </div>
 </aside>
@@ -124,3 +122,4 @@
 </script>
 </body>
 </html>
+
