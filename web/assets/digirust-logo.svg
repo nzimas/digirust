@@ -1,4 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 80" role="img" aria-label="DigiRust">
-  <path fill="#87d9e8" fill-rule="evenodd" d="M8 12h20l12 12v32L28 68H8V12zm8 8v40h9l7-7V27l-7-7h-9zM44 12h18l10 10v14L61 47l13 21H64L51 47h-7V12zm8 8v19h6l6-6v-7l-6-6h-6zM44 48h8v20h-8z"/>
-  <text x="98" y="61" fill="#eef3f5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="58" font-weight="600" letter-spacing="-2">DigiRust</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="DigiRust">
+<g stroke-linejoin="miter">
+  <!-- Three interlocked structural sections, with recessed faces and cut terminals. -->
+  <path d="M80 5 145 42v18l-15-8V50L80 21 30 50v2l-15 8V42Z" fill="#28466f"/>
+  <path d="M15 65 30 56v49l50 29 50-29V56l15 9v49l-65 38-65-38Z" fill="#213957"/>
+  <path d="m80 21 50 29-16 9-34-20-34 20-16-9Z" fill="#a5c5ff"/>
+  <path d="m80 39 34 20v18L80 57 46 77V59Z" fill="#527cb9"/>
+  <path d="m35 53 25 14v33l20 12v29L35 115Z" fill="#759de0"/>
+  <path d="m35 53 25 14-16 9-25-14Z" fill="#b8d2ff"/>
+  <path d="m19 62 25 14v48l-25-15Z" fill="#2c4a77"/>
+  <path d="m60 100 20 12-16 9-20-12V76l16-9Z" fill="#1b2e49"/>
+  <path d="m125 53-25 14v33l-20 12v29l45-26Z" fill="#426ba9"/>
+  <path d="m125 53-25 14 16 9 25-14Z" fill="#a5c5ff"/>
+  <path d="m141 62-25 14v48l25-15Z" fill="#6993d1"/>
+  <path d="m100 100-20 12 16 9 20-12V76l-16-9Z" fill="#243d60"/>
+  <!-- Central aperture and the three bridges crossing the inner assembly. -->
+  <path d="m80 60 16 9v19l-16 10-16-10V69Z" fill="#06070a" stroke="#91b6f6" stroke-width="1.5"/>
+  <path d="m64 74 16-9 16 9-16 9Z" fill="#33547c"/>
+  <path d="m64 74 16 9v15L64 88Z" fill="#8db4ff"/>
+  <path d="m96 74-16 9v15l16-10Z" fill="#426ca7"/>
+  <path d="m80 65 7 4-7 4-7-4Z" fill="#d4e3ff"/>
+  <!-- Inset seams establish the folded construction without relying on gradients. -->
+  <g fill="none" stroke="#c3d8ff" stroke-width="1.2">
+    <path d="m80 26 41 24-10 6M80 43l-27 16v11M24 67l15 9v39M39 58l16 10v33l19 11M121 58l-16 10v33l-19 11M136 67l-15 9v39"/>
+  </g>
+  <g fill="none" stroke="#6d99df" stroke-width="1">
+    <path d="M80 9 139 44M21 44l40-23M21 106l9 5M130 111l9-5M80 140v6M80 45v9M49 118l19 11M92 129l19-11"/>
+  </g>
+  <!-- Small polygonal fasteners and recessed slots. -->
+  <g fill="#b3cdff">
+    <path d="m36 40 4-2 3 2-4 3Zm81 0 3-2 4 2-3 3ZM25 89l3 2v5l-3-2Zm107 2 3-2v5l-3 2ZM69 131l4 2v5l-4-2Zm18 2 4-2v5l-4 2Z"/>
+  </g>
+  <g fill="#101c30">
+    <path d="m57 39 4-2 15 9-4 2Zm27 7 15-9 4 2-15 9ZM48 87l5 3v14l-5-3Zm59 3 5-3v14l-5 3Z"/>
+  </g>
+</g>
+<text x="188" y="103" fill="#eef3f5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="76" font-weight="600" letter-spacing="-3">DigiRust</text>
 </svg>

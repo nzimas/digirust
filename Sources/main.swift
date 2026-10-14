@@ -6,7 +6,7 @@ private enum Palette {
     static let border = NSColor(srgbRed: 0.23, green: 0.28, blue: 0.34, alpha: 1)
     static let text = NSColor(srgbRed: 0.96, green: 0.97, blue: 0.99, alpha: 1)
     static let secondary = NSColor(srgbRed: 0.73, green: 0.78, blue: 0.84, alpha: 1)
-    static let accent = NSColor(srgbRed: 0.96, green: 0.65, blue: 0.42, alpha: 1)
+    static let accent = NSColor(srgbRed: 0.553, green: 0.706, blue: 1.0, alpha: 1)
     static let success = NSColor(srgbRed: 0.60, green: 0.87, blue: 0.70, alpha: 1)
 }
 private func label(_ text: String, _ size: CGFloat = 18, _ weight: NSFont.Weight = .regular, _ color: NSColor = Palette.text) -> NSTextField {
@@ -70,14 +70,8 @@ final class RustButton: NSButton {
 }
 final class RustMark: NSView {
     override func draw(_ dirtyRect: NSRect) {
-        let plate = NSBezierPath(roundedRect: bounds, xRadius: bounds.width*0.25, yRadius: bounds.height*0.25)
-        Palette.accent.withAlphaComponent(0.14).setFill(); plate.fill()
-        let heights: [CGFloat] = [0.25,0.47,0.70,0.36,0.58,0.27]
-        Palette.accent.setFill()
-        for (i,h) in heights.enumerated() {
-            let w = bounds.width*0.067, hh = bounds.height*h
-            NSBezierPath(roundedRect: NSRect(x: bounds.width*(0.20+CGFloat(i)*0.108), y: (bounds.height-hh)/2, width: w, height: hh), xRadius: w/2, yRadius: w/2).fill()
-        }
+        guard let context = NSGraphicsContext.current?.cgContext else { return }
+        drawDigiRustEmblem(context, in: bounds)
     }
 }
 final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {

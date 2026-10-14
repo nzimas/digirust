@@ -1,5 +1,12 @@
 # Changes
 
+## Logo and colour revision
+
+- Replaced the D/R monogram with a detailed interlocking geometric emblem.
+- Changed the website accent to light blue against a near-black background.
+- No waveform or audio-symbol imagery is used in the logo.
+- The macOS icon and app header use the same emblem and blue accent.
+
 ## Website presentation
 
 - Reduced homepage text and replaced promotional copy with technical descriptions.

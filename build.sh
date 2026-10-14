@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 APP="$PWD/dist/DigiRust.app"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" build
 cp Resources/* "$APP/Contents/Resources/"
-xcrun swiftc -swift-version 5 Artwork/render_icon.swift -o build/render-icon
+xcrun swiftc -swift-version 5 Sources/Brand.swift Artwork/render_icon.swift -o build/render-icon
 build/render-icon build/DigiRust.png
 mkdir -p build/DigiRust.iconset
 for size in 16 32 128 256 512; do
