@@ -4,7 +4,7 @@
 
 > **DIGITONE II ONLY — USE AT YOUR OWN RISK. Installing modified firmware may void your manufacturer warranty. It can render your instrument unusable; recovery is not guaranteed. Do not install it on any other machine. Read the [full disclaimer](DISCLAIMER.md) before use.**
 
-DigiRust is made for **IDM, rhythmic noise, industrial, electroacoustic, acousmatic and other experimental electronic music**. Its generators favor unusual timbres, textures, varied rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
+DigiRust is made for **IDM, rhythmic noise / power noise, and electroacoustic music**. Its generators favor unusual timbres, textures, varied rhythms, deliberate structure and controlled aggression. Abstract material and melodic exploration belong alongside percussion.
 
 This is the author's musical direction, and the tools offered here follow it. Conventional groovebox workflows, mainstream beatmaking and hip-hop beat generation are outside the project's design goals. The aim is to explore, sculpt and perform edgier electronic music.
 

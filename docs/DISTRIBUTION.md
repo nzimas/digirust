@@ -10,7 +10,7 @@ The additions include GCC support routines. GPLv3 and GCC Runtime Library Except
 
 Patcher-only distribution avoids supplying complete firmware but does not, by itself, establish legal permission for adaptation or redistribution of every addition. See the retained notices. No claim of legal clearance is made.
 
-The project's musical direction is the author's: tools for edgier experimental electronic music, including IDM, rhythmic noise, industrial, electroacoustic and acousmatic practice. Conventional groovebox beatmaking is outside its design scope.
+The project's musical direction is the author's: tools for edgier experimental electronic music, including IDM, rhythmic noise / power noise, and electroacoustic practice. Conventional groovebox beatmaking is outside its design scope.
 
 ## Publication boundary
 

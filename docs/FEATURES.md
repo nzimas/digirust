@@ -1,6 +1,6 @@
 # Features and performance guide
 
-DigiRust's musical focus is experimental electronic music: IDM, rhythmic noise, industrial sound design, electroacoustic gestures, acousmatic textures and unusual pitched material. Diversity and cohesion matter together. The tools are not designed around conventional beatmaking templates.
+DigiRust's musical focus is experimental electronic music: IDM, rhythmic noise / power noise, and electroacoustic music. Diversity and cohesion matter together. The tools are not designed around conventional beatmaking templates.
 
 ## Generator location and repeat workflow
 
