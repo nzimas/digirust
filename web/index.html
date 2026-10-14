@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Experimental firmware for Digitone II · DigiRust</title>
 <meta name="description" content="Experimental electronic music tools for Digitone II. Patch your own OS 1.12 locally in your browser. No firmware upload or automatic installation.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://img.youtube.com; connect-src 'self'; worker-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/svg+xml" href="assets/digirust-mark.svg">
 <link rel="stylesheet" href="site.css">
@@ -64,10 +64,13 @@
 <div>
 <h2>Demo</h2>
 <div class="demo" id="demo">
-<button class="button secondary" id="play-demo" aria-label="Play DigiRust demo on YouTube">Play video</button>
-<p class="small">Loads YouTube when selected.</p>
-<a href="https://www.youtube.com/shorts/BoazPrfJgIs">Open on YouTube</a>
+<button class="demo-preview" id="play-demo" aria-label="Play DigiRust demo">
+<img src="https://img.youtube.com/vi/BoazPrfJgIs/hqdefault.jpg" alt="DigiRust demo on a Digitone II" width="480" height="360" referrerpolicy="no-referrer">
+<span class="demo-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+<span class="demo-caption">Play demo</span>
+</button>
 </div>
+<p class="small demo-link"><a href="https://www.youtube.com/shorts/BoazPrfJgIs">Open on YouTube</a></p>
 </div>
 </section>
 <section class="home-warning">

@@ -63,7 +63,7 @@ See the [complete feature and control guide](docs/FEATURES.md) and [DigiRust rel
 4. Read the disclaimer, acknowledge the warning and choose **Create firmware copy**. You can cancel while it runs.
 5. When verification succeeds, choose **Download verified DigiRust firmware**. The filename is `Digitone_II_OS1.12_DigiRust.syx`.
 
-Your original file is unchanged. Browser saving follows your browser's download behavior. No Python, Homebrew or compiler is required. The site's patch resources need a network connection; your firmware itself stays in browser memory. YouTube is loaded only if you choose to play the demo.
+Your original file is unchanged. Browser saving follows your browser's download behavior. No Python, Homebrew or compiler is required. The site's patch resources need a network connection; your firmware itself stays in browser memory. The demo thumbnail loads from YouTube; its embedded player loads only when you press play.
 
 The [macOS app](https://github.com/nzimas/digirust/releases/tag/v1.2.0) remains available. Choose/drop the same official file, select **Create patched firmware…** and a new local destination, then wait for verification. The macOS app never overwrites existing files and requires a filesystem with hard-link support, such as APFS/HFS+.
 

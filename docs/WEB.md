@@ -10,7 +10,7 @@ The site is static HTML/CSS/JavaScript with no application server and no npm run
 
 `web/core/worker.mjs` handles validation and patching off the UI thread. Web Crypto supplies SHA-256 and HMAC. The input file is read into browser memory, not uploaded or placed in browser storage. Only static site assets and patch resources are fetched. The site has no MIDI or instrument connection, telemetry, service worker or automatic installation.
 
-The optional demo loads YouTube's privacy-enhanced player only after the visitor presses play. GitHub serves the site; normal hosting request handling still applies. Local file processing does not mean the whole website is offline.
+The demo thumbnail loads from YouTube's image server. Its privacy-enhanced player loads only after the visitor presses play. GitHub serves the site; normal hosting request handling still applies. Local file processing does not mean the whole website is offline.
 
 ## Integrity and saving
 
