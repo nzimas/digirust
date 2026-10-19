@@ -69,6 +69,8 @@ li { margin-bottom: 10px; }
 .footer { border-top: 1px solid var(--line); padding: 28px 0 35px; font-size: 15px; color: var(--muted); }
 .footer .wrap { display: flex; gap: 24px; justify-content: space-between; align-items: start; }
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.donate { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.donate p { margin: 0; font-size: 16px; color: var(--ink); }
 .page-head { padding: 45px 0 24px; max-width: 830px; }
 .patch-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 30px; padding-bottom: 50px; align-items: start; }
 .patch-card { border: 1px solid var(--line); background: var(--panel); padding: 28px; }
