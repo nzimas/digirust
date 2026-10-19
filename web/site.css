@@ -122,3 +122,9 @@ details p { margin: 14px 0 0; color: var(--muted); }
   .function-list div { grid-template-columns: 80px 1fr; gap: 12px; }
   .article table { min-width: 540px; }
 }
+.contact { border: 1px solid var(--line); background: var(--panel); padding: 24px; margin: 10px 0 40px; max-width: 720px; }
+.contact label { display: block; font-size: 20px; }
+.contact-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+.contact input { font-size: 22px; width: 7em; padding: 10px 12px; border: 1px solid var(--accent); background: var(--bg); color: var(--ink); }
+.contact p { margin: 12px 0 0; }
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
