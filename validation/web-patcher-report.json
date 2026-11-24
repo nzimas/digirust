@@ -1,12 +1,12 @@
 {
-  "reportDate": "2026-10-13",
+  "reportDate": "2026-11-24",
   "webVersion": "1.0.0",
-  "firmwareTarget": "RC17",
+  "firmwareTarget": "DigiRust (patcher 1.3.0)",
   "testsPassed": 24,
   "nativeCodecParityCases": 7,
   "completeOutputByteExact": true,
-  "outputBytes": 2483616,
-  "outputSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "outputBytes": 2497056,
+  "outputSHA256": "3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4",
   "browserUI": {
     "stockIdentityChecked": true,
     "explicitCreateAndDownloadPassed": true,
@@ -14,11 +14,13 @@
     "cancellationPassed": true,
     "desktopLayoutChecked": true,
     "mobileWidth": 390,
-    "mobileHorizontalOverflow": false
+    "mobileHorizontalOverflow": false,
+    "recordedFor": "earlier firmware target (2026-10-13); the web page code is unchanged apart from pins and text"
   },
   "instrumentAccessed": false,
   "limitations": [
     "Browser UI tested in the Codex in-app browser on this Apple Silicon Mac; other browser/device combinations not exhaustively tested",
-    "Existing firmware hardware-test statement is developer-reported, not new device validation by the web port"
+    "Existing firmware hardware-test statement is developer-reported, not new device validation by the web port",
+    "For this release the 24 engine tests, including exact output, ran under Node; browser UI was rechecked for page loading only"
   ]
 }

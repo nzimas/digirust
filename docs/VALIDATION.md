@@ -5,13 +5,21 @@
 | File | SHA-256 |
 | --- | --- |
 | Official Digitone II OS 1.12 input | `7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35` |
-| DigiRust generated `.syx` | `9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda` |
+| DigiRust generated `.syx` | `3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4` |
 
 The app checks input identity, resource integrity and complete output identity. It reconstructs unchanged content from the user input and additions from the bundled recipe. Package checks cover container integrity and unchanged protected sections. Hash equality establishes file identity, not safe operation on hardware.
 
 ## Recorded local tests
 
-The JSON summaries in `validation/` record the DigiRust development checks and DigiRust 1.2.0 delivery checks:
+The JSON summaries in `validation/` record the DigiRust development checks and patcher delivery checks.
+
+For this release (patcher 1.3.0), see `firmware-release-report.json`:
+
+- Host tests and byte-exact host/ColdFire comparisons for the generator shortcuts, lock roll, break and shuffle, with stock pattern decode/encode round trips.
+- Fresh boots of the exact firmware package in the emulator with real front-panel input: kit/pattern questions answered and cancelled; lock rolls, breaks and shuffles matching the host generator and restoring the pattern byte for byte; compressor copied only to the bank's patterns with notes; note audition with balanced note-on/off.
+- 24 browser patcher tests including exact output from the official file, and 18 macOS patcher integration tests.
+
+Earlier checks, recorded for the kit Brutality release:
 
 - 256 rhythmic kits / 4,096 sounds in host tests, including default-35% RC16 parity.
 - 32 host/ColdFire kit parity cases and 512 stock sound-codec round trips.
@@ -26,7 +34,7 @@ These summaries are historical evidence, not a claim that the private full emula
 
 ## Hardware evidence and limits
 
-The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. The report was supplied by the developer on **12 October 2026**. It is not an independently witnessed certification or an exhaustive test of every seed, configuration or instrument.
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. The report was supplied by the developer on **12 October 2026**, for an earlier build; the additions in patcher 1.3.0 were verified in the emulator, not in that report. It is not an independently witnessed certification or an exhaustive test of every seed, configuration or instrument.
 
 This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable.
 

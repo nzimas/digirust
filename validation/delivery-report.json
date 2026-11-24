@@ -1,25 +1,24 @@
 {
-  "version": "1.2.0",
-  "firmware": "RC17",
-  "guiOutputByteExact": true,
+  "version": "1.3.0",
+  "firmware": "DigiRust",
+  "guiOutputRechecked": false,
   "extractedArchiveOutputByteExact": true,
   "extractedSignatureVerified": true,
-  "referenceAppBrandAbsent": true,
-  "firmwareSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "firmwareSHA256": "3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4",
   "archives": [
     {
-      "archive": "DigiRust-1.2.0-macOS.zip",
-      "bytes": 770086,
-      "files": 16,
-      "sha256": "d3390afcded52aa23c2b01a0ed1c239ca45b79c8791059dda5a8ea9bcf1e7820",
+      "archive": "DigiRust-1.3.0-macOS.zip",
+      "bytes": 583323,
+      "files": 26,
+      "sha256": "0c332aa5af0441598ed3bc2a51ca793dcbf46accd327454d490576f252245463",
       "containsFullFirmware": false,
       "containsFullStockTemplates": false
     },
     {
-      "archive": "DigiRust-1.2.0-source.zip",
-      "bytes": 227059,
-      "files": 34,
-      "sha256": "eb95492352a69bfe6237eeee208231004e2fa5a97994e5b4023465463defc6c2",
+      "archive": "DigiRust-1.3.0-source.zip",
+      "bytes": 884380,
+      "files": 88,
+      "sha256": "23f7b95264f1d81cb833af037e017522452aa27f01841f7c2dec62f23e5c6ed7",
       "containsFullFirmware": false,
       "containsFullStockTemplates": false
     }

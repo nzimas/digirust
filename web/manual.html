@@ -86,6 +86,64 @@
 <h2>Drone latch and Perform Kit</h2>
 <p>With Grid Recording disabled, hold an audio track's live trig first, then tap <kbd>FUNC</kbd>. Release both to retain the gate. Repeat to unlatch; <kbd>STOP</kbd> releases all latches. FUNC-first stock gestures remain intact. Independently decaying sound components can still fade.</p>
 <p>Enable Perform Kit with <kbd>FUNC</kbd> + <kbd>PRESET/KIT</kbd>, modify the parameters, then exit with the same gesture. Restored parameters reach latched voices without another note-on. Oscillator phase, envelopes and effect tails are not rewound. Generators release active latches before updating content.</p>
+<h2>PAGE shortcuts</h2>
+<p>Hold <kbd>PAGE</kbd> and press a second key. PAGE alone, and each key without PAGE, keep their stock behavior. With <kbd>FUNC</kbd> held first, the generator shortcuts are off.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>PAGE +</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>TRIG</kbd></td>
+<td>New patch on the selected audio track.</td>
+</tr>
+<tr>
+<td><kbd>SYN</kbd></td>
+<td>New kit, after <strong>NEW KIT? YES/NO</strong>.</td>
+</tr>
+<tr>
+<td><kbd>FILTER</kbd></td>
+<td>New phrase on the selected track.</td>
+</tr>
+<tr>
+<td><kbd>AMP</kbd></td>
+<td>New pattern, after <strong>NEW PATTERN? Y/N</strong>.</td>
+</tr>
+<tr>
+<td>Trig key 1–16</td>
+<td>Selects that track and rolls its parameter locks, velocities and cycle conditions.</td>
+</tr>
+<tr>
+<td><kbd>FUNC</kbd> (held)</td>
+<td>Pattern break while held.</td>
+</tr>
+<tr>
+<td><kbd>KEYBOARD</kbd> (held)</td>
+<td>Shuffle while held.</td>
+</tr>
+<tr>
+<td><kbd>MOD</kbd></td>
+<td>On the Compressor page: copies the compressor to the bank.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Generator shortcuts</h3>
+<p>Each press draws its path from Abstract, IDM and Rhythmic Noise (Phrase: Abstract or Rhythmic), never repeating the previous path, with Density and Brutality drawn per press. The values on the SYSTEM generator screens are not read or changed. Kit and pattern questions stay on screen until answered: <kbd>YES</kbd> generates, <kbd>NO</kbd> or any other key cancels. Generated patches and kits have no delay send; reverb and chorus sends remain.</p>
+<h3>Lock roll</h3>
+<p>Locks are drawn from the sound processing, never the source, so the sound remains recognizable: filter, amp envelope and pan, overdrive and bit/sample-rate reduction, LFOs with non-pitch destinations, and sends, with occasional delay throws. Each trig gets a velocity, and some trigs a cycle condition (1:2 … 4:4; the first trig stays unconditional). Pitch is never changed; note lengths only occasionally, within the gap to the next trig. Each press replaces the previous roll on that track. MIDI tracks are refused.</p>
+<h3>Break</h3>
+<p>Hold <kbd>PAGE</kbd>, then hold <kbd>FUNC</kbd>. The pattern plays a break for as long as FUNC is held: stutter, half time, double time, reverse, chop, roll or slam, with ratchets and flams on drum tracks. Release either key and the pattern returns exactly as it was. Each press draws a different character. Drones and the kit are left alone. FUNC first, then PAGE, keeps its stock meaning.</p>
+<h3>Shuffle</h3>
+<p>Hold <kbd>PAGE</kbd>, then hold <kbd>KEYBOARD</kbd>. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (steps, velocity, length, micro timing, conditions, retrigs and locks) on its own sound and at its own pitches. The trade is redrawn every 2, 4 or 8 steps. Release either key and every track plays its own steps again; nothing is saved. MIDI and empty tracks are left alone. Breaks and shuffles do not stack.</p>
+<h3>Compressor to bank</h3>
+<p>Open the Compressor page (<kbd>FUNC</kbd> + <kbd>MOD</kbd>, “Compressor (1/5)”), hold <kbd>PAGE</kbd> and press <kbd>MOD</kbd>. All nine compressor controls are copied to every other pattern in the current bank of 16 that has notes: <strong>COMP APPLIED: n PATTERNS</strong>. Empty patterns and other banks are untouched, and each pattern’s compressor can still be adjusted afterwards. The copies are unsaved edits until the project is saved. On other pages PAGE + MOD behaves like MOD. It does nothing while a Perform kit is active.</p>
+<h2>Note audition</h2>
+<p>In grid recording, hold a trig and turn NOTE on the TRIG page. Each new pitch sounds at once, on the track’s sound at the step’s velocity, one note per detent (the whole chord if the step holds one). Releasing the trig stops it. Nothing is written by the audition itself.</p>
 <h2>Further details</h2>
 <p>
 <a href="https://github.com/nzimas/digirust/blob/main/docs/FEATURES.md">Complete feature guide ↗</a> · <a href="https://github.com/nzimas/digirust/blob/main/DigiRust-Features.md">DigiRust release details ↗</a>
@@ -98,7 +156,7 @@
 <div class="footer-links">
 <a href="about.html#risk">Disclaimer</a>
 <a href="assets/licenses/DigiRust-MIT.txt">License</a>
-<a href="https://github.com/nzimas/digirust/releases/tag/v1.2.0">macOS patcher</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.3.0">macOS patcher</a>
 </div>
 <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_xclick">

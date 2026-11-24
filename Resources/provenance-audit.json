@@ -1,8 +1,8 @@
 {
-  "release": "RC17",
-  "operations": 27857,
-  "literalBytes": 106006,
-  "stockSourcedBytes": 3293706,
+  "release": "RC24",
+  "operations": 32030,
+  "literalBytes": 113724,
+  "stockSourcedBytes": 3306276,
   "knownStockDerivedBlocks": [
     {
       "label": "sound template 0",
@@ -31,19 +31,19 @@
     {
       "label": "displaced instructions",
       "length": 6,
-      "occurrences": 10,
+      "occurrences": 12,
       "sha256": "3d2695518d50d9d1cd4ed14fd391ccd9891f2ff58024327022f13b891dc99927"
     },
     {
       "label": "fallback instruction constant",
       "length": 4,
-      "occurrences": 32,
+      "occurrences": 34,
       "sha256": "932bbddb03ada19536fa5af4c9a118f86b4a7731a45a3adc9ad1c578afc93bc7"
     },
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 148,
+      "occurrences": 158,
       "sha256": "110ee2dda2ee0a6391d1a47b48a2a2d1957562fd734b15ca4dbe723e671c09b8"
     },
     {
@@ -61,7 +61,7 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 328,
+      "occurrences": 348,
       "sha256": "774e33e878c3e22aba021f52a92fce5221c8c8e152ce67c08557d23eea236e5d"
     },
     {
@@ -79,7 +79,7 @@
     {
       "label": "fallback instruction constant",
       "length": 4,
-      "occurrences": 17,
+      "occurrences": 20,
       "sha256": "12d338634f70e3ff15edd2a5b562f3f36d22c53b0d2df23f8ab61ad6adf44900"
     },
     {
@@ -103,19 +103,19 @@
     {
       "label": "displaced instructions",
       "length": 8,
-      "occurrences": 1,
+      "occurrences": 2,
       "sha256": "9b78b6778f56449ca9429e734d2140df96316ae0e9eea0b9d6eea089f82ddbd0"
     },
     {
       "label": "fallback instruction constant",
       "length": 4,
-      "occurrences": 32,
+      "occurrences": 34,
       "sha256": "932bbddb03ada19536fa5af4c9a118f86b4a7731a45a3adc9ad1c578afc93bc7"
     },
     {
       "label": "fallback instruction constant",
       "length": 4,
-      "occurrences": 4,
+      "occurrences": 5,
       "sha256": "6e046143e4e1f4a9d672335be5e94952daae6ac471062980646ef278f1a83c05"
     },
     {
@@ -139,7 +139,7 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 39,
+      "occurrences": 47,
       "sha256": "33cf864c1fd1d0c2f89cfbc601bca43b1af55d2a68726413cded25ffb02d3c57"
     },
     {
@@ -169,7 +169,7 @@
     {
       "label": "fallback instruction constant",
       "length": 4,
-      "occurrences": 8,
+      "occurrences": 9,
       "sha256": "7f284fb65360c6f575800b1a7f6020278ea44dcfb08684ee639a5b361437086c"
     },
     {
@@ -181,8 +181,26 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 3,
+      "occurrences": 4,
       "sha256": "7893607c94f9568ada94005d128cdfe7745e4ae551293ba48f1fdfc38956e159"
+    },
+    {
+      "label": "displaced instructions",
+      "length": 8,
+      "occurrences": 1,
+      "sha256": "9e5114cb6825c39b3e6a008912dc0d906a49d4bbda2bd1686f55f0a9e8732c75"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 4,
+      "sha256": "0a035a96c5f98782833c495bfb3529a3105d38be9772f5157dae27fa03ee5018"
+    },
+    {
+      "label": "fallback instruction constant",
+      "length": 4,
+      "occurrences": 4,
+      "sha256": "c573d97a7e060f78076ff102bfcdf11da81a0cf20470f031c45738528f5efd20"
     },
     {
       "label": "fallback branch constant",

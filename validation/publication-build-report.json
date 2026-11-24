@@ -1,7 +1,7 @@
 {
-  "patcherVersion": "1.2.0",
-  "firmwareTarget": "RC17",
+  "patcherVersion": "1.3.0",
+  "firmwareTarget": "DigiRust",
   "rebuiltCuratedSource": true,
-  "exactOutputSHA256": "9e934872b0a88df389db32235ce491bbff18f35b45bd47d654d1986e13f26bda",
+  "exactOutputSHA256": "3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4",
   "instrumentAccessed": false
 }

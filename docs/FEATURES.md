@@ -61,6 +61,62 @@ The later latch implementation retains the existing live note rather than introd
 
 Enable **Perform Kit** with **FUNC + PRESET/KIT**, sculpt the sounds, then exit with the same gesture. DigiRust reapplies the restored parameter state to latched voices without another note-on/off. It does not rewind oscillator phase, envelopes or effect tails to a previous instant.
 
+## PAGE shortcuts
+
+Hold **PAGE** and press a second key. PAGE alone, and each key without PAGE, keep their stock behavior. With **FUNC** held first, the generator shortcuts are off. The key press and its release are withheld from the stock firmware when a shortcut fires. Generation releases DigiRust drone latches first, as menu generation does.
+
+| PAGE + | Result |
+| --- | --- |
+| **TRIG** | New patch on the selected audio track (MIDI tracks refused) |
+| **SYN** | New kit, after **NEW KIT? YES/NO** |
+| **FILTER** | New phrase on the selected track |
+| **AMP** | New pattern, after **NEW PATTERN? Y/N** |
+| **Trig key 1–16** | Selects that track and rolls its locks, velocities and conditions |
+| **FUNC** (held) | Pattern break while held |
+| **KEYBOARD** (held) | Shuffle while held |
+| **MOD** | On the Compressor page only: copy the compressor to the bank |
+
+### Generator shortcuts
+
+Each press draws its path from **Abstract**, **IDM** and **Rhythmic Noise** (Phrase: **Abstract** or **Rhythmic**). Every path appears once per round and a new round never opens with the path the previous one closed on, so consecutive presses change path. Density (15–65%) and Brutality (10–90%) are drawn per press where the path has them. The values on the SYSTEM generator screens are not read or changed.
+
+The kit and pattern questions stay on screen until answered. **YES** generates; **NO** or any other key cancels. Patch and phrase shortcuts are immediate.
+
+Every patch and kit generator, from the menus or shortcuts, sets the delay send to 0. Reverb and chorus sends remain; the pattern generator's delay throws are unchanged.
+
+### Lock roll
+
+PAGE + trig key N selects track N (no note is played) and rolls its sequence:
+
+- **Parameter locks** on every triggered step, from the sound processing only, never the source: filter frequency, resonance and envelope, amp decay/sustain/release and pan, overdrive and bit/sample-rate reduction (leading most rolls, as grit on some steps), LFO speed/fade/phase/depth for LFOs with a non-pitch destination, and reverb/chorus/delay sends, with occasional 1–3-step delay throws. SYN machine parameters, pitch, envelope attacks and amp hold and volume are never locked.
+- **Velocity** per trig.
+- **Cycle conditions** (1:2 … 4:4), no probability. The first trig stays unconditional.
+- **Note lengths** in about one roll in three, never on sustained material, always within the gap to the next trig.
+
+Each press replaces that track's previous roll; it does not accumulate. Steps, notes and other tracks are never changed. MIDI tracks are refused.
+
+### Break
+
+Hold **PAGE**, then hold **FUNC**. The whole pattern breaks for as long as FUNC is held; release either key and it returns exactly as it was. Each press draws a character, never the same twice in a row: **STUTTER**, **HALF**, **DOUBLE**, **REVERSE**, **CHOP**, **ROLL** or **SLAM**. Drum tracks add their own ratchets and flams (real Elektron retrigs); the kick keeps each bar's first step; melodic tracks follow the time feel; drones are left alone. The kit is untouched and latched drones keep playing. **FUNC first, then PAGE** keeps its stock meaning.
+
+### Shuffle
+
+Hold **PAGE**, then hold **KEYBOARD**. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (which steps fire, velocity, length, micro timing, trig condition, retrig and locks) on its own sound and at its own pitches. On a step where it has no note of its own, it plays its last earlier notes. The trade is redrawn every 2, 4 or 8 steps, all tracks together, and no stretch leaves every track on its own steps. Each press draws a new shuffle.
+
+Release either key and the original pattern is put back exactly; nothing is saved. Tracks with no notes, MIDI tracks and empty tracks are left alone. A lock moved to a track on another machine is kept within that machine's range, or dropped if it has no such parameter. Break and shuffle never stack. KEYBOARD alone, or before PAGE, works as before.
+
+The Digitone II sequencer is stock, so a shuffled pattern is swapped in while the keys are held: a 16-step pattern repeats its shuffle each time round until you press again.
+
+### Compressor to bank
+
+Open the Compressor page (**FUNC + MOD**, titled "Compressor (1/5)"), hold **PAGE** and press **MOD**. The nine compressor controls (THR, ATK, REL, MUP, VOL, RAT, SCS, SCF, MIX) are copied to every other pattern in the current bank of 16 that has at least one note. The screen confirms **COMP APPLIED: n PATTERNS**, or **NO OTHER PATTERNS**.
+
+Empty patterns, other banks and every other kit setting are untouched. Each pattern's compressor can still be adjusted afterwards. The copies are ordinary unsaved edits until the project is saved. On any other page, including mixer pages 2/5–5/5, PAGE + MOD behaves like MOD. While a Perform kit is active it does nothing and shows **EXIT PERFORM FIRST**.
+
+## Note audition
+
+In grid recording, hold a trig and turn **NOTE** on the TRIG page. Each new pitch sounds at once, on the track's sound at the step's velocity; the previous pitch is cut, so each detent plays one clean note (the whole chord if the step holds one). Releasing a trig stops the audition. The note edit itself is stock, and the audition writes nothing to the pattern or kit. NOTE turned with no trig held, and trigs outside grid recording, behave as before.
+
 ## Practical limits
 
-Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer reports thorough real-instrument testing and current operation without observed issues; see the provenance and limits in [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.
+Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer's real-instrument report was made on an earlier DigiRust build; the PAGE shortcuts, delay-send change and note audition were verified in the emulator. See [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.

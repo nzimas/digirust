@@ -24,13 +24,13 @@ The website includes the patcher, demo, manual and disclaimer. Firmware is proce
 
 ## macOS download
 
-[Download DigiRust 1.2.0 for macOS](https://github.com/nzimas/digirust/releases/tag/v1.2.0) · [All releases](https://github.com/nzimas/digirust/releases)
+[Download DigiRust 1.3.0 for macOS](https://github.com/nzimas/digirust/releases/tag/v1.3.0) · [All releases](https://github.com/nzimas/digirust/releases)
 
 | Component | Supported version |
 | --- | --- |
 | Instrument | Elektron Digitone II |
 | Official input firmware | OS **1.12**, exact file verified by SHA-256 |
-| Patcher | DigiRust **1.2.0** |
+| Patcher | DigiRust **1.3.0** |
 | Generated modification | **DigiRust** |
 | Internal instrument OS version | Remains **1.12** |
 | Tested environment | Apple Silicon, **macOS 27.0 (build 26A428)** |
@@ -50,6 +50,12 @@ Local patcher testing was performed on this Apple Silicon Mac running **macOS 27
 | Control All macros | A held TRACK encoder gesture affects the corresponding parameters across every subpage of SYN, FILTER, AMP and FX. |
 | Live drone latch | Hold a live audio track trig, then tap FUNC to retain its gate. Repeat to release; STOP clears latches. |
 | Perform Kit restoration | Exiting Perform Kit restores stored sound parameters to latched voices without issuing another note-on. |
+| PAGE generator shortcuts | PAGE + TRIG / SYN / FILTER / AMP generates a patch, kit, phrase or pattern; kit and pattern ask YES/NO first. |
+| Lock roll | PAGE + a trig key selects that track and rolls its parameter locks, velocities and cycle conditions. |
+| Break | Hold PAGE, then FUNC: stutter, half/double time, reverse, chop, roll or slam while held; the pattern returns exactly. |
+| Shuffle | Hold PAGE, then KEYBOARD: tracks trade their sequencing, on their own sounds and pitches, while held. |
+| Compressor to bank | PAGE + MOD on the Compressor page copies the compressor to every pattern with notes in the current bank. |
+| Note audition | In grid recording, hold a trig and turn NOTE: each new pitch is heard at once. |
 
 The pattern tools include varied rhythmic structures and tempos, and path-aware compressor generation. Brutality shapes synthesis and sequence behavior according to the chosen tool; it is not simply a volume control. High-contrast percentage bars support parameter editing.
 
@@ -65,13 +71,13 @@ See the [complete feature and control guide](docs/FEATURES.md) and [DigiRust rel
 
 Your original file is unchanged. Browser saving follows your browser's download behavior. No Python, Homebrew or compiler is required. The site's patch resources need a network connection; your firmware itself stays in browser memory. The demo thumbnail loads from YouTube; its embedded player loads only when you press play.
 
-The [macOS app](https://github.com/nzimas/digirust/releases/tag/v1.2.0) remains available. Choose/drop the same official file, select **Create patched firmware…** and a new local destination, then wait for verification. The macOS app never overwrites existing files and requires a filesystem with hard-link support, such as APFS/HFS+.
+The [macOS app](https://github.com/nzimas/digirust/releases/tag/v1.3.0) remains available. Choose/drop the same official file, select **Create patched firmware…** and a new local destination, then wait for verification. The macOS app never overwrites existing files and requires a filesystem with hard-link support, such as APFS/HFS+.
 
 **Creating the file does not install it.** Device transfer is a separate, deliberate operation outside this patcher. Read the [validation and recovery limits](docs/VALIDATION.md) before deciding whether to install a generated image. Follow Elektron's documentation for your instrument and keep the official firmware available. No recovery procedure can be guaranteed by this project's local tests.
 
 ## Developer hardware report
 
-The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues.
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. That report was made on an earlier build (12 October 2026); the additions in this release were verified in the emulator.
 
 This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable. See the [validation guide](docs/VALIDATION.md) for the distinction between this report and the recorded automated checks.
 

@@ -30,5 +30,5 @@ engine=(WEB/'core/patcher.mjs').read_text();worker=(WEB/'core/worker.mjs').read_
 assert 'requestMIDIAccess' not in engine+worker+(WEB/'app.mjs').read_text()
 assert 'fetch(' not in engine
 assert worker.count('fetch(')==1 and "new URL('../assets/'" in worker
-assert '100eed55b5374db3f7ddd678ade4f9d1a13d2548afe9a08e6915699c6e3adf5e' in engine
+assert '38b3d7a766b12311e8f32632f912b1232969871c5fc8403bc6d2faaa54807c43' in engine
 print(json.dumps({'pages':list(pages),'localLinksPassed':True,'resourcesMatchMacOSPatcher':True,'completeFirmwareIncluded':False,'browserHasNoInstrumentAccess':True},indent=2))

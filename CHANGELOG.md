@@ -1,5 +1,13 @@
 # Changes
 
+## DigiRust 1.3.0 — 24 November 2026
+
+- Firmware: PAGE shortcuts for patch, kit, phrase and pattern generation (kit and pattern ask YES/NO, and the question stays until answered).
+- Firmware: PAGE + trig key lock roll; PAGE + FUNC breaks; PAGE + KEYBOARD shuffle; PAGE + MOD copies the compressor to the bank's patterns with notes.
+- Firmware: note audition while turning NOTE on a held trig in grid recording.
+- Firmware: generated patches and kits have no delay send.
+- Patcher: new recipe and additions for this firmware (output SHA-256 `3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4`); browser and macOS patchers produce it byte for byte. Input remains official OS 1.12.
+
 ## Flat logo and custom lettering
 
 - Replaced the faceted emblem with single-colour planar geometry.
@@ -38,4 +46,4 @@
 
 ## Numbering
 
-Patcher version **1.2.0** identifies the macOS application. **DigiRust** is the public name of the generated firmware. The internal vendor OS version remains **1.12**. Earlier development releases are not included in this repository. New stock versions require a separately validated recipe; they cannot be supported by renaming files.
+Patcher version **1.3.0** identifies the macOS application. **DigiRust** is the public name of the generated firmware. The internal vendor OS version remains **1.12**. Earlier development releases are not included in this repository. New stock versions require a separately validated recipe; they cannot be supported by renaming files.

@@ -25,7 +25,7 @@ try{
  if(stockPath){
   const raw=new Uint8Array(await readFile(stockPath)),original=raw.slice(),recipe=new Uint8Array(await readFile(root+'web/assets/firmware-patch.json')),additions=new Uint8Array(await readFile(root+'web/assets/additions.bin'));
   let result;const start=Date.now();
-  await test('exact complete RC17 output and unchanged input',async()=>{result=await patch(raw,recipe,additions);assert.equal(await digest(result),PINS.output);assert.equal(result.length,2483616);assert.deepEqual(raw,original);});
+  await test('exact complete RC24 output and unchanged input',async()=>{result=await patch(raw,recipe,additions);assert.equal(await digest(result),PINS.output);assert.equal(result.length,2497056);assert.deepEqual(raw,original);});
   await test('reject modified firmware as input',()=>assert.rejects(patch(result,recipe,additions)));
   await test('reject one-bit stock corruption',()=>{const b=raw.slice();b[300]^=1;return assert.rejects(patch(b,recipe,additions));});
   await test('reject wrong-instrument file',()=>{const b=raw.slice();b[4]=0x0e;return assert.rejects(patch(b,recipe,additions));});
