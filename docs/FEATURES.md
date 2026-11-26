@@ -74,6 +74,7 @@ Hold **PAGE** and press a second key. PAGE alone, and each key without PAGE, kee
 | **Trig key 1–16** | Selects that track and rolls its locks, velocities and conditions |
 | **FUNC** (held) | Pattern break while held |
 | **KEYBOARD** (held) | Shuffle while held |
+| **TRK** (held) | Gate while held |
 | **MOD** | On the Compressor page only: copy the compressor to the bank |
 
 ### Generator shortcuts
@@ -107,6 +108,18 @@ Release either key and the original pattern is put back exactly; nothing is save
 
 The Digitone II sequencer is stock, so a shuffled pattern is swapped in while the keys are held: a 16-step pattern repeats its shuffle each time round until you press again.
 
+### Gate
+
+Hold **PAGE**, then hold **TRK**. While both are held, the tracks with notes are muted and opened rhythmically. The pattern is cut into slices on one timeline shared by all tracks, so the gating stays in time with the tempo. In each slice some tracks play and some are silent; every slice keeps at least one track playing and, with two or more tracks, silences at least one.
+
+Each press draws a new gating and its feel: all sixteenths, sixteenths and eighths, or a broken mix up to quarter notes, and how often the tracks are open (40–65% of the time).
+
+A silenced step plays nothing: no trig, no note, no parameter lock. A step that plays is unchanged. A note that started before a silenced step rings on through it, so note releases and delay and reverb tails are kept. A sustained track whose only trig falls on a silenced step is silent for the whole hold.
+
+Release either key and the original pattern is put back exactly; nothing is saved. Tracks with no notes, MIDI tracks and empty tracks are left alone. While the gate is on, trig keys do nothing. Break, shuffle and gate never stack. TRK alone, or before PAGE, works as before.
+
+As with the shuffle, a gated pattern is swapped in while the keys are held: a 16-step pattern repeats its gating each time round until you press again.
+
 ### Compressor to bank
 
 Open the Compressor page (**FUNC + MOD**, titled "Compressor (1/5)"), hold **PAGE** and press **MOD**. The nine compressor controls (THR, ATK, REL, MUP, VOL, RAT, SCS, SCF, MIX) are copied to every other pattern in the current bank of 16 that has at least one note. The screen confirms **COMP APPLIED: n PATTERNS**, or **NO OTHER PATTERNS**.
@@ -119,4 +132,4 @@ In grid recording, hold a trig and turn **NOTE** on the TRIG page. Each new pitc
 
 ## Practical limits
 
-Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer's real-instrument report was made on an earlier DigiRust build; the PAGE shortcuts, delay-send change and note audition were verified in the emulator. See [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.
+Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer's real-instrument report was made on an earlier DigiRust build; the PAGE shortcuts (including the gate), delay-send change and note audition were verified in the emulator. See [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.

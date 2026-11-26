@@ -126,6 +126,10 @@
 <td>Shuffle while held.</td>
 </tr>
 <tr>
+<td><kbd>TRK</kbd> (held)</td>
+<td>Gate while held.</td>
+</tr>
+<tr>
 <td><kbd>MOD</kbd></td>
 <td>On the Compressor page: copies the compressor to the bank.</td>
 </tr>
@@ -140,6 +144,8 @@
 <p>Hold <kbd>PAGE</kbd>, then hold <kbd>FUNC</kbd>. The pattern plays a break for as long as FUNC is held: stutter, half time, double time, reverse, chop, roll or slam, with ratchets and flams on drum tracks. Release either key and the pattern returns exactly as it was. Each press draws a different character. Drones and the kit are left alone. FUNC first, then PAGE, keeps its stock meaning.</p>
 <h3>Shuffle</h3>
 <p>Hold <kbd>PAGE</kbd>, then hold <kbd>KEYBOARD</kbd>. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (steps, velocity, length, micro timing, conditions, retrigs and locks) on its own sound and at its own pitches. The trade is redrawn every 2, 4 or 8 steps. Release either key and every track plays its own steps again; nothing is saved. MIDI and empty tracks are left alone. Breaks and shuffles do not stack.</p>
+<h3>Gate</h3>
+<p>Hold <kbd>PAGE</kbd>, then hold <kbd>TRK</kbd>. While both are held, the tracks with notes are muted and opened rhythmically, in slices shared by all tracks so the gating stays in time: all sixteenths, sixteenths and eighths, or a broken mix up to quarter notes, drawn per press with a new gating each time. Every slice keeps at least one track playing and silences at least one. A silenced step plays nothing; notes already sounding ring on, so releases and delay and reverb tails are kept. Release either key and the pattern returns exactly. MIDI and empty tracks are left alone; trig keys do nothing while it is on. Break, shuffle and gate do not stack.</p>
 <h3>Compressor to bank</h3>
 <p>Open the Compressor page (<kbd>FUNC</kbd> + <kbd>MOD</kbd>, “Compressor (1/5)”), hold <kbd>PAGE</kbd> and press <kbd>MOD</kbd>. All nine compressor controls are copied to every other pattern in the current bank of 16 that has notes: <strong>COMP APPLIED: n PATTERNS</strong>. Empty patterns and other banks are untouched, and each pattern’s compressor can still be adjusted afterwards. The copies are unsaved edits until the project is saved. On other pages PAGE + MOD behaves like MOD. It does nothing while a Perform kit is active.</p>
 <h2>Note audition</h2>
@@ -156,7 +162,7 @@
 <div class="footer-links">
 <a href="about.html#risk">Disclaimer</a>
 <a href="assets/licenses/DigiRust-MIT.txt">License</a>
-<a href="https://github.com/nzimas/digirust/releases/tag/v1.3.0">macOS patcher</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.4.0">macOS patcher</a>
 </div>
 <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_xclick">

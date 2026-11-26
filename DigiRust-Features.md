@@ -1,8 +1,18 @@
-# DigiRust — PAGE performance shortcuts
+# DigiRust — gate
 
-Firmware based on official Digitone II OS **1.12**; the internal OS version remains **1.12**. Created by DigiRust patcher **1.3.0** (browser and macOS). Output SHA-256 `3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4`. Everything in the previous release is kept.
+Firmware based on official Digitone II OS **1.12**; the internal OS version remains **1.12**. Created by DigiRust patcher **1.4.0** (browser and macOS). Output SHA-256 `a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e`. Everything in the previous release is kept.
 
 ## New in this release
+
+- **PAGE + TRK (held):** gate. The tracks with notes are muted and opened rhythmically, in slices of sixteenths, eighths or quarters that all tracks share, so the gating stays in time. Every slice keeps at least one track playing and silences at least one. Each press draws a new gating and feel. Tails and releases ring on; the pattern returns exactly on release.
+
+See the [feature guide](docs/FEATURES.md#gate) for every rule and limit.
+
+### Validation limits
+
+The gate passed 400 host gates matching an independent model byte for byte, 18 byte-exact host/ColdFire comparisons with stock pattern-codec round trips, and a fresh boot of the exact firmware package in the emulator with real front-panel input: two gates matched the host generator and restored the pattern byte for byte in either release order, a trig key pressed while gated did nothing, TRK alone kept its stock behavior and the shuffle still worked. The emulator cannot judge sound or timing; the gate has not been played on the instrument.
+
+## PAGE performance shortcuts (patcher 1.3.0)
 
 - **PAGE + TRIG / SYN / FILTER / AMP:** generate a patch, kit, phrase or pattern without opening a menu. Each press draws its path and controls. Kit and pattern ask **YES/NO** first, and the question stays until answered.
 - **PAGE + trig key:** select that track and roll its parameter locks, velocities and cycle conditions, from the sound processing only, never pitch.

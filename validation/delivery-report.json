@@ -1,24 +1,24 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "firmware": "DigiRust",
   "guiOutputRechecked": false,
   "extractedArchiveOutputByteExact": true,
   "extractedSignatureVerified": true,
-  "firmwareSHA256": "3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4",
+  "firmwareSHA256": "a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e",
   "archives": [
     {
-      "archive": "DigiRust-1.3.0-macOS.zip",
-      "bytes": 583323,
+      "archive": "DigiRust-1.4.0-macOS.zip",
+      "bytes": 585743,
       "files": 26,
-      "sha256": "0c332aa5af0441598ed3bc2a51ca793dcbf46accd327454d490576f252245463",
+      "sha256": "1ba2820020cb0ecc89f35f8c13680ad8af25d219a7f3dd09086c663cbebc6248",
       "containsFullFirmware": false,
       "containsFullStockTemplates": false
     },
     {
-      "archive": "DigiRust-1.3.0-source.zip",
-      "bytes": 884380,
+      "archive": "DigiRust-1.4.0-source.zip",
+      "bytes": 888631,
       "files": 88,
-      "sha256": "23f7b95264f1d81cb833af037e017522452aa27f01841f7c2dec62f23e5c6ed7",
+      "sha256": "3287980ab565d05b6420cbf8762df7e326bd1e96c3c0a060d7d0b385d3f2c722",
       "containsFullFirmware": false,
       "containsFullStockTemplates": false
     }

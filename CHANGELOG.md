@@ -1,5 +1,10 @@
 # Changes
 
+## DigiRust 1.4.0 — 26 November 2026
+
+- Firmware: PAGE + TRK gate. Hold PAGE, then TRK: the tracks with notes are muted and opened rhythmically, in time, with a new gating on each press; the pattern returns exactly on release.
+- Patcher: new recipe and additions for this firmware (output SHA-256 `a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e`); browser and macOS patchers produce it byte for byte. Input remains official OS 1.12.
+
 ## DigiRust 1.3.0 — 24 November 2026
 
 - Firmware: PAGE shortcuts for patch, kit, phrase and pattern generation (kit and pattern ask YES/NO, and the question stays until answered).
@@ -46,4 +51,4 @@
 
 ## Numbering
 
-Patcher version **1.3.0** identifies the macOS application. **DigiRust** is the public name of the generated firmware. The internal vendor OS version remains **1.12**. Earlier development releases are not included in this repository. New stock versions require a separately validated recipe; they cannot be supported by renaming files.
+Patcher version **1.4.0** identifies the macOS application. **DigiRust** is the public name of the generated firmware. The internal vendor OS version remains **1.12**. Earlier development releases are not included in this repository. New stock versions require a separately validated recipe; they cannot be supported by renaming files.

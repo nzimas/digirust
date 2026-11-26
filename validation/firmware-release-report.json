@@ -1,12 +1,12 @@
 {
-  "reportDate": "2026-11-24",
+  "reportDate": "2026-11-26",
   "project": "DigiRust",
-  "patcherVersion": "1.3.0",
+  "patcherVersion": "1.4.0",
   "stockOSVersion": "1.12",
   "internalOSVersion": "1.12",
-  "firmwareSHA256": "3a5931ab37cf8f177fd1f330aa495fe749c7916541f8c412bac373d2dd953ea4",
-  "mainSHA256": "27e1d9a77d49b74da132c55e553cbc811078bef7e445fb7b27c71699837274e2",
-  "firmwareBytes": 2497056,
+  "firmwareSHA256": "a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e",
+  "mainSHA256": "c6ef81bed0ae038a623c655ecced3cbd935d86ad519ec716ceb0d5897fa0026f",
+  "firmwareBytes": 2498080,
   "additions": [
     "PAGE generator shortcuts with YES/NO for kit and pattern",
     "PAGE + trig key lock roll",
@@ -14,7 +14,8 @@
     "PAGE + KEYBOARD shuffle",
     "PAGE + MOD compressor to bank",
     "note audition on held trigs",
-    "no delay send on generated sounds"
+    "no delay send on generated sounds",
+    "PAGE + TRK gate"
   ],
   "hostAndColdFireChecks": {
     "lockRollHostRolls": 1680,
@@ -24,7 +25,10 @@
     "shuffleModelCases": 300,
     "shuffleByteExactCases": 18,
     "shuffleCodecRoundTrips": 6,
-    "generatedSoundsDelaySendZero": 1488
+    "generatedSoundsDelaySendZero": 1488,
+    "gateHostCases": 400,
+    "gateByteExactCases": 18,
+    "gateCodecRoundTrips": 6
   },
   "emulatorPanelChecks": {
     "freshExactPackageBoot": true,
@@ -34,7 +38,11 @@
     "shufflesMatchHostAndRestoreExactly": true,
     "compressorCopiedOnlyToBankPatternsWithNotes": true,
     "noteAuditionBalancedNoteOnOff": true,
-    "faultPages": 0
+    "faultPages": 0,
+    "gatesMatchHostAndRestoreExactly": true,
+    "trigKeyIgnoredWhileGated": true,
+    "trkAloneStock": true,
+    "shuffleRegressionRestoresExactly": true
   },
   "knownEnvironmentFailure": "verify_phased_cpu.py rejects a stock write at 0x400257ae in the emulator, identically on the unmodified earlier workspace",
   "instrumentAccessed": false,
@@ -42,6 +50,8 @@
   "limitations": [
     "Synthetic DSP/peripherals and ISA shims; no physical audio, hardware timing or cache validation",
     "Project save and reload after a compressor copy not exercised on the instrument",
-    "The developer hardware report predates these additions"
-  ]
+    "The developer hardware report predates these additions",
+    "The gate has not been played on the instrument"
+  ],
+  "emulatorPanelChecksRecordedFor": "Gate checks on the exact 1.4.0 package; earlier checks were recorded on the 1.3.0 package and the shuffle regression was repeated"
 }

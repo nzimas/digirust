@@ -1,8 +1,8 @@
 {
-  "release": "RC24",
-  "operations": 32030,
-  "literalBytes": 113724,
-  "stockSourcedBytes": 3306276,
+  "release": "RC25",
+  "operations": 32260,
+  "literalBytes": 114431,
+  "stockSourcedBytes": 3306817,
   "knownStockDerivedBlocks": [
     {
       "label": "sound template 0",
@@ -43,7 +43,7 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 158,
+      "occurrences": 159,
       "sha256": "110ee2dda2ee0a6391d1a47b48a2a2d1957562fd734b15ca4dbe723e671c09b8"
     },
     {
@@ -61,7 +61,7 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 348,
+      "occurrences": 349,
       "sha256": "774e33e878c3e22aba021f52a92fce5221c8c8e152ce67c08557d23eea236e5d"
     },
     {
@@ -139,7 +139,7 @@
     {
       "label": "fallback instruction constant",
       "length": 2,
-      "occurrences": 47,
+      "occurrences": 48,
       "sha256": "33cf864c1fd1d0c2f89cfbc601bca43b1af55d2a68726413cded25ffb02d3c57"
     },
     {
