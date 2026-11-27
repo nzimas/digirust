@@ -1,10 +1,10 @@
 {
   "app": "DigiRust",
-  "version": "1.4.0",
-  "firmware": "RC25",
+  "version": "1.6.0",
+  "firmware": "RC27",
   "tests": [
     {
-      "test": "exact RC25 output",
+      "test": "exact RC27 output",
       "passed": true
     },
     {
@@ -79,5 +79,5 @@
   "count": 18,
   "allPassed": true,
   "stockInputSHA256": "7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35",
-  "outputSHA256": "a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e"
+  "outputSHA256": "161249fa0144d4c69a288f08698ac061a987b424a9841bd7bb035c64698fac41"
 }

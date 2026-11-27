@@ -5,7 +5,7 @@
 | File | SHA-256 |
 | --- | --- |
 | Official Digitone II OS 1.12 input | `7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35` |
-| DigiRust generated `.syx` | `a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e` |
+| DigiRust generated `.syx` | `161249fa0144d4c69a288f08698ac061a987b424a9841bd7bb035c64698fac41` |
 
 The app checks input identity, resource integrity and complete output identity. It reconstructs unchanged content from the user input and additions from the bundled recipe. Package checks cover container integrity and unchanged protected sections. Hash equality establishes file identity, not safe operation on hardware.
 
@@ -13,7 +13,25 @@ The app checks input identity, resource integrity and complete output identity. 
 
 The JSON summaries in `validation/` record the DigiRust development checks and patcher delivery checks.
 
-For this release (patcher 1.4.0), see `firmware-release-report.json`:
+For this release (patcher 1.6.0), see `firmware-release-report.json`:
+
+- Phrase engine: 5,760 host phrases on 4/4, 12-step one-length and polymeter/mixed-clock set-ups; other tracks' notes, length and clock unchanged, nothing past the loop, the kick on step 1, density limits kept, conditions and retrigs valid. The full host suite passes.
+- 2,400 gates and 1,800 shuffles matching independent models, including a mixed-clock set-up.
+- Byte-exact host/ColdFire comparisons: 27 phrase cases with 15 stock decode/encode round trips keeping steps, length and clock; 27 shuffle, 27 gate and 21 shortcut cases.
+- A fresh boot of the exact firmware package in the emulator with real front-panel input: a zone kit and pattern, then PAGE + FILTER on tracks 1, 2, 5, 9, 11 and 14 (the live pattern plays the new length and clock, other tracks untouched); shuffle and gate on the phrased pattern matched the host and restored exactly; a 12-step one-length pattern switched to per-track with the other tracks still 12 steps; 0 fault pages.
+- 24 browser patcher tests including exact output from the official file, and 18 macOS patcher integration tests.
+- Not played on the instrument; the rhythms were checked as data, not by ear.
+
+Checks for patcher 1.5.0:
+
+- Meter: 1,500 host shuffles on 25 set-ups, 2,000 gates and 2,800 breaks; 4/4 breaks byte-identical to the previous release in 210 of 210 cases.
+- Shortcut zones: 23,040 shortcut sounds, all distinct; a kick in 120 of 120 rhythmic shortcut patterns.
+- Byte-exact host/ColdFire comparisons: 42 break, 27 shuffle, 27 gate and 21 shortcut cases.
+- A fresh boot of the exact firmware package in the emulator with real front-panel input: a zone kit and pattern from the shortcuts, the clock advancing, shuffle and gate restoring exactly; on a live pattern set to 12 steps, shuffle, gate and break matched the host, nothing past step 12 changed and the pattern was restored exactly; 0 fault pages.
+- 24 browser patcher tests including exact output from the official file, and 18 macOS patcher integration tests.
+- Not played on the instrument; the sounds were checked by their parameters, not by ear.
+
+Checks for patcher 1.4.0:
 
 - Gate: 400 host gates matching an independent model byte for byte; 18 byte-exact host/ColdFire comparisons with 6 stock pattern decode/encode round trips.
 - A fresh boot of the exact firmware package in the emulator with real front-panel input: two gates matching the host generator and restoring the pattern byte for byte in either release order; a trig key while gated changed nothing; TRK alone stock; the shuffle still restores exactly.
@@ -40,7 +58,7 @@ These summaries are historical evidence, not a claim that the private full emula
 
 ## Hardware evidence and limits
 
-The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. The report was supplied by the developer on **12 October 2026**, for an earlier build; the additions in patchers 1.3.0 and 1.4.0 were verified in the emulator, not in that report. It is not an independently witnessed certification or an exhaustive test of every seed, configuration or instrument.
+The developer reports that DigiRust modified firmware has been thoroughly tested on a real Elektron Digitone II and is currently running on that instrument without any observed issues. The report was supplied by the developer on **12 October 2026**, for an earlier build; the additions in patchers 1.3.0, 1.4.0, 1.5.0 and 1.6.0 were verified in the emulator, not in that report. It is not an independently witnessed certification or an exhaustive test of every seed, configuration or instrument.
 
 This records the developer's experience on that instrument. It is a factual report, not encouragement to install, an endorsement, a guarantee of safety or compatibility, or a prediction of results on another instrument. The warranty and use-at-your-own-risk warnings remain applicable.
 

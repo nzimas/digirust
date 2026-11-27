@@ -107,7 +107,7 @@
 </tr>
 <tr>
 <td><kbd>FILTER</kbd></td>
-<td>New phrase on the selected track.</td>
+<td>New phrase on the selected track, with its own length and clock.</td>
 </tr>
 <tr>
 <td><kbd>AMP</kbd></td>
@@ -137,13 +137,17 @@
 </table>
 </div>
 <h3>Generator shortcuts</h3>
-<p>Each press draws its path from Abstract, IDM and Rhythmic Noise (Phrase: Abstract or Rhythmic), never repeating the previous path, with Density and Brutality drawn per press. The values on the SYSTEM generator screens are not read or changed. Kit and pattern questions stay on screen until answered: <kbd>YES</kbd> generates, <kbd>NO</kbd> or any other key cancels. Generated patches and kits have no delay send; reverb and chorus sends remain.</p>
+<p>Each press draws its path from Abstract, IDM and Rhythmic Noise (the phrase shortcut has its own engine, below), never repeating the previous path, with Density and Brutality drawn per press. The values on the SYSTEM generator screens are not read or changed. Whatever the path, track 1 is always a kick, tracks 2–12 are strike sounds (snares, claps, hats, rides, cymbals, toms, rims, clangs, slams, shakers, short noises) and tracks 13–16 are textures, atmospheres, drones and pads; the path only colours them. Strikes have a fast attack, no sustain and no pitch LFO. Each sound is named after its role, so the pattern, phrase and break shortcuts treat it as what it is: <kbd>PAGE</kbd> + <kbd>AMP</kbd> gives textures long held notes, and <kbd>PAGE</kbd> + <kbd>FILTER</kbd> writes a phrase in the sound's own role. A clock from power-on stirs the draws, so a new session gives new kits. The SYSTEM menu generators are unchanged. Kit and pattern questions stay on screen until answered: <kbd>YES</kbd> generates, <kbd>NO</kbd> or any other key cancels. Generated patches and kits have no delay send; reverb and chorus sends remain.</p>
+<h3>Phrase shortcut</h3>
+<p><kbd>PAGE</kbd> + <kbd>FILTER</kbd> writes a phrase on the selected track in the role of its sound, and sets that track's own length (2–32 steps) and clock (2x, 3/2x, 1x, 3/4x, 1/2x, 1/4x, 1/8x). Some phrases stay locked to the bar with a new feel (24 steps at 3/2x for triplets, 32 at 2x, 12 at 3/4x); others drift as polymeter at lengths such as 5, 7, 13, 21 or 31. Kick and snare always lock to the pattern's meter; textures, drones and pads are held on slow clocks.</p>
+<p>Strike sounds draw one of twelve rhythm families: Euclidean, aksak, ghost-weighted, Thue-Morse and Fibonacci, a cellular automaton played as cycle conditions, tresillo/clave/bembé, power-noise hammering, industrial stomp, broken IDM with flams, four-on-the-floor and backbeats. Then ghosts, rolls, swing/drag/push, cycle variation, a turnaround, a few locks and tom pitches. The kick keeps step 1 and there is no other pitch movement. Everything is ordinary step data and can be edited afterwards. On a one-length pattern the phrase switches to per-track mode; every other track keeps its length and clock. The SYSTEM menu Phrase Generator is unchanged.</p>
 <h3>Lock roll</h3>
 <p>Locks are drawn from the sound processing, never the source, so the sound remains recognizable: filter, amp envelope and pan, overdrive and bit/sample-rate reduction, LFOs with non-pitch destinations, and sends, with occasional delay throws. Each trig gets a velocity, and some trigs a cycle condition (1:2 … 4:4; the first trig stays unconditional). Pitch is never changed; note lengths only occasionally, within the gap to the next trig. Each press replaces the previous roll on that track. MIDI tracks are refused.</p>
 <h3>Break</h3>
 <p>Hold <kbd>PAGE</kbd>, then hold <kbd>FUNC</kbd>. The pattern plays a break for as long as FUNC is held: stutter, half time, double time, reverse, chop, roll or slam, with ratchets and flams on drum tracks. Release either key and the pattern returns exactly as it was. Each press draws a different character. Drones and the kit are left alone. FUNC first, then PAGE, keeps its stock meaning.</p>
+<p>Break, shuffle and gate follow the length that actually plays: the pattern LENGTH in one-length mode, each track's own length in per-track mode. A 12-step loop is three beats of four; shuffle pieces and gate slices never cross a beat, a track of another length follows its own loop, and steps past the played length are never touched. Patterns in 4/4 break exactly as before.</p>
 <h3>Shuffle</h3>
-<p>Hold <kbd>PAGE</kbd>, then hold <kbd>KEYBOARD</kbd>. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (steps, velocity, length, micro timing, conditions, retrigs and locks) on its own sound and at its own pitches. The trade is redrawn every 2, 4 or 8 steps. Release either key and every track plays its own steps again; nothing is saved. MIDI and empty tracks are left alone. Breaks and shuffles do not stack.</p>
+<p>Hold <kbd>PAGE</kbd>, then hold <kbd>KEYBOARD</kbd>. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (steps, velocity, length, micro timing, conditions, retrigs and locks) on its own sound and at its own pitches. The trade is redrawn in half beats, beats or half bars, never across a beat; tracks of the same length and clock trade together. Release either key and every track plays its own steps again; nothing is saved. MIDI and empty tracks are left alone. Breaks and shuffles do not stack.</p>
 <h3>Gate</h3>
 <p>Hold <kbd>PAGE</kbd>, then hold <kbd>TRK</kbd>. While both are held, the tracks with notes are muted and opened rhythmically, in slices shared by all tracks so the gating stays in time: all sixteenths, sixteenths and eighths, or a broken mix up to quarter notes, drawn per press with a new gating each time. Every slice keeps at least one track playing and silences at least one. A silenced step plays nothing; notes already sounding ring on, so releases and delay and reverb tails are kept. Release either key and the pattern returns exactly. MIDI and empty tracks are left alone; trig keys do nothing while it is on. Break, shuffle and gate do not stack.</p>
 <h3>Compressor to bank</h3>
@@ -162,7 +166,7 @@
 <div class="footer-links">
 <a href="about.html#risk">Disclaimer</a>
 <a href="assets/licenses/DigiRust-MIT.txt">License</a>
-<a href="https://github.com/nzimas/digirust/releases/tag/v1.4.0">macOS patcher</a>
+<a href="https://github.com/nzimas/digirust/releases/tag/v1.6.0">macOS patcher</a>
 </div>
 <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_xclick">

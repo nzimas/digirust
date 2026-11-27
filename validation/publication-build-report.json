@@ -1,7 +1,7 @@
 {
-  "patcherVersion": "1.4.0",
+  "patcherVersion": "1.6.0",
   "firmwareTarget": "DigiRust",
   "rebuiltCuratedSource": true,
-  "exactOutputSHA256": "a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e",
+  "exactOutputSHA256": "161249fa0144d4c69a288f08698ac061a987b424a9841bd7bb035c64698fac41",
   "instrumentAccessed": false
 }

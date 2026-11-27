@@ -2,10 +2,10 @@
 // Byte-identical level-0 packing and transport; only pinned Digitone II input.
 export class PatchError extends Error {}
 export const PINS = Object.freeze({
-  recipe: 'e2c17002c3ac7cb7089fb81a1ce6f9637fce1064a808a2e99fa4bff1a2213e88',
-  additions: '16e8a9f0b32241e1225922aa529dcbeaf290f98c14f9faf9dac19260f6e65097',
+  recipe: '18f828f4bbff3fd0c6093657b735b2cde8a9b1c7e67212b437a78405a2fc3893',
+  additions: '23632f005d1c34b34e4fb9d2570e34be0daef899c2ea9d5db6ba997f377568d9',
   stock: '7e5b8a733d4ab1fdf7e5d22757f7d8eddaa3cbf71d0858874a791844c02ceb35',
-  output: 'a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e',
+  output: '161249fa0144d4c69a288f08698ac061a987b424a9841bd7bb035c64698fac41',
 });
 const check = (ok, text) => { if (!ok) throw new PatchError(text); };
 const equal = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);

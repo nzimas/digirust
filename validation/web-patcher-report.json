@@ -1,12 +1,12 @@
 {
-  "reportDate": "2026-11-26",
+  "reportDate": "2026-11-27",
   "webVersion": "1.0.0",
-  "firmwareTarget": "DigiRust (patcher 1.4.0)",
+  "firmwareTarget": "DigiRust (patcher 1.6.0)",
   "testsPassed": 24,
   "nativeCodecParityCases": 7,
   "completeOutputByteExact": true,
-  "outputBytes": 2498080,
-  "outputSHA256": "a382efeb19f23b9a295753b9b2cd450e7f5c4c45184331f740581e220207144e",
+  "outputBytes": 2515360,
+  "outputSHA256": "161249fa0144d4c69a288f08698ac061a987b424a9841bd7bb035c64698fac41",
   "browserUI": {
     "stockIdentityChecked": true,
     "explicitCreateAndDownloadPassed": true,

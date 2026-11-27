@@ -2,7 +2,7 @@
 from pathlib import Path
 import json, subprocess, zipfile
 from audit_distribution import ROOT, audit, check_asset, sha
-VERSION = '1.4.0'
+VERSION = '1.6.0'
 files = audit()
 dist = ROOT / 'dist'; app = dist / 'DigiRust.app'
 assert app.is_dir(), 'Run ./build.sh first'

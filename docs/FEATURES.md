@@ -69,7 +69,7 @@ Hold **PAGE** and press a second key. PAGE alone, and each key without PAGE, kee
 | --- | --- |
 | **TRIG** | New patch on the selected audio track (MIDI tracks refused) |
 | **SYN** | New kit, after **NEW KIT? YES/NO** |
-| **FILTER** | New phrase on the selected track |
+| **FILTER** | New phrase on the selected track, with its own length and clock |
 | **AMP** | New pattern, after **NEW PATTERN? Y/N** |
 | **Trig key 1–16** | Selects that track and rolls its locks, velocities and conditions |
 | **FUNC** (held) | Pattern break while held |
@@ -79,11 +79,49 @@ Hold **PAGE** and press a second key. PAGE alone, and each key without PAGE, kee
 
 ### Generator shortcuts
 
-Each press draws its path from **Abstract**, **IDM** and **Rhythmic Noise** (Phrase: **Abstract** or **Rhythmic**). Every path appears once per round and a new round never opens with the path the previous one closed on, so consecutive presses change path. Density (15–65%) and Brutality (10–90%) are drawn per press where the path has them. The values on the SYSTEM generator screens are not read or changed.
+Each press draws its path from **Abstract**, **IDM** and **Rhythmic Noise** (the phrase shortcut has its own engine, see [Phrase shortcut](#phrase-shortcut)). Every path appears once per round and a new round never opens with the path the previous one closed on, so consecutive presses change path. Density (15–65%) and Brutality (10–90%) are drawn per press where the path has them. The values on the SYSTEM generator screens are not read or changed.
+
+The shortcuts give each track a sound by its zone, whatever path is drawn:
+
+| Tracks | Sounds |
+| --- | --- |
+| **1** | Always a kick |
+| **2–12** | Strike sounds: snares, claps, cracks, closed and open hats, rides, cymbals, toms, rims, clangs, slams, stamps, shakers, cowbells and short noises. A kit deals every kind at least once. |
+| **13–16** | Textures, atmospheres, drones and pads (no leads, basses or plucks); at most two of a kind in a kit |
+
+The path only colours the sounds: Noise is driven and reduced, IDM crisp and metallic, Abstract roomier and longer. Strike sounds come from the existing recipes or from new strike designs on FM DRUM, WAVETONE and FM TONE. Every strike has a fast attack, no sustain and a decay set by its kind. Pitch sweeps are kept short (a kick's drop, a tom's thump, nothing else) and no LFO reaches a pitch. Kicks stay in kick range; textures always sustain and release slowly.
+
+Each sound is named after its role (RIVET CLANG, GLASS HAT, FOG WASH …), so the pattern, phrase and break generators treat every track as what it was made to be. **PAGE + AMP** treats tracks 1–12 as percussion, and textures and pads hold long notes (one or two bars). **PAGE + FILTER** writes a phrase in the sound's own role (see [Phrase shortcut](#phrase-shortcut)). The shortcut draws are stirred by a clock that runs from power-on, so a new session does not repeat the previous session's kits.
+
+The SYSTEM menu generators keep the track roles described above.
 
 The kit and pattern questions stay on screen until answered. **YES** generates; **NO** or any other key cancels. Patch and phrase shortcuts are immediate.
 
 Every patch and kit generator, from the menus or shortcuts, sets the delay send to 0. Reverb and chorus sends remain; the pattern generator's delay throws are unchanged.
+
+### Phrase shortcut
+
+**PAGE + FILTER** writes a new phrase on the selected track only, in the role of its sound. It also sets that track's own **length, 2 to 32 steps**, and its own **clock**: 2x, 3/2x, 1x, 3/4x, 1/2x, 1/4x or 1/8x. The SYSTEM menu Phrase Generator is unchanged.
+
+Some phrases stay locked to the bar while changing the feel: 24 steps at 3/2x (triplets over a bar), 32 at 2x (32nd notes), 12 at 3/4x (a dotted feel), 8 or 16 at 1/2x. Others drift as polymeter, at lengths such as 5, 7, 10, 11, 13, 21, 22, 26 or 31. The kick and snare always lock to the pattern's own meter (16 or 32; 12 or 24 in a 3/4 set). The bar is read from the kick track, or from the most common loop.
+
+| Role | Length and clock |
+| --- | --- |
+| Kick | One or two bars at 1x, or two bars at 2x |
+| Snare, clap | One or two bars, 1x or 2x |
+| Hats, shakers | Straight, triplet (3/2x) or 32nd (2x); or 6, 10, 12, 14, 20 or 22 steps |
+| Open hats, rides, cymbals | Longer odd loops, or 3/4x |
+| Toms, rims, perc | Odd loops, groups of 2 and 3 |
+| Clangs, slams, stamps | 20 to 32 steps, sometimes at 1/2x; sparse |
+| Textures, drones, pads | 3 to 16 steps at 1/2x, 1/4x or 1/8x, with held notes; a pair of notes may alternate by cycle |
+
+A strike sound draws one of twelve rhythm families: a Euclidean spread with an accent layer; aksak (the loop split into 2s and 3s); ghost-weighted placement by position in the beat; Thue-Morse and Fibonacci-word placement; an elementary cellular automaton, its generations played as cycle conditions; tresillo, clave and bembé timelines; power-noise hammering with an accent contour and gaps; industrial stomp (heavy displaced hits); broken IDM figures with flams; and four-on-the-floor and backbeats (kick and snare only).
+
+Then modifiers: ghost notes, rolls, groove (swing, drag, push), cycle variation and a turnaround every fourth cycle, a few locks (shorter decay on ghosts, a brighter filter on accents, filter and reverb on textures) and tom pitches. Phrases have no pitch movement apart from a small fixed tom note set. Density is capped per role, the kick keeps step 1, textures get no retrigs, and ghosts stay off the kick.
+
+Everything is ordinary step data: accent, normal and ghost velocities, micro timing, probability (ghost notes only), cycle conditions (1:2 … 4:4, and A:N for automaton generations), retrigs and locks. Edit any step afterwards as usual.
+
+If the pattern is in one-length mode, the phrase switches it to per-track mode first. Every other track keeps playing exactly as before: its length is set to the length it was playing, its clock to the master scale, the master length becomes INF and the pattern still changes after the old length.
 
 ### Lock roll
 
@@ -100,9 +138,11 @@ Each press replaces that track's previous roll; it does not accumulate. Steps, n
 
 Hold **PAGE**, then hold **FUNC**. The whole pattern breaks for as long as FUNC is held; release either key and it returns exactly as it was. Each press draws a character, never the same twice in a row: **STUTTER**, **HALF**, **DOUBLE**, **REVERSE**, **CHOP**, **ROLL** or **SLAM**. Drum tracks add their own ratchets and flams (real Elektron retrigs); the kick keeps each bar's first step; melodic tracks follow the time feel; drones are left alone. The kit is untouched and latched drones keep playing. **FUNC first, then PAGE** keeps its stock meaning.
 
+The break uses the loop's own bars (see [Meter](#meter)): in a 12-step loop, chop shuffles three beats, reverse works in beats, the second slam lands on beat 3 or the and of beat 2, and rolls, bursts and gaps fall in the last beat. Patterns in 4/4 break exactly as before.
+
 ### Shuffle
 
-Hold **PAGE**, then hold **KEYBOARD**. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (which steps fire, velocity, length, micro timing, trig condition, retrig and locks) on its own sound and at its own pitches. On a step where it has no note of its own, it plays its last earlier notes. The trade is redrawn every 2, 4 or 8 steps, all tracks together, and no stretch leaves every track on its own steps. Each press draws a new shuffle.
+Hold **PAGE**, then hold **KEYBOARD**. While both are held, the tracks trade their sequencing: each track with notes plays another track's trigs (which steps fire, velocity, length, micro timing, trig condition, retrig and locks) on its own sound and at its own pitches. On a step where it has no note of its own, it plays its last earlier notes. The trade is redrawn in half beats, beats or half bars (whole bars when a 3/4 loop has more than one), always on the grid, so a piece never crosses a beat. Tracks of the same length and clock trade together, and no stretch leaves every track on its own steps. A track of another length follows its own loop; a step it borrows keeps its place in the source's bar instead of wrapping. Each press draws a new shuffle.
 
 Release either key and the original pattern is put back exactly; nothing is saved. Tracks with no notes, MIDI tracks and empty tracks are left alone. A lock moved to a track on another machine is kept within that machine's range, or dropped if it has no such parameter. Break and shuffle never stack. KEYBOARD alone, or before PAGE, works as before.
 
@@ -112,13 +152,17 @@ The Digitone II sequencer is stock, so a shuffled pattern is swapped in while th
 
 Hold **PAGE**, then hold **TRK**. While both are held, the tracks with notes are muted and opened rhythmically. The pattern is cut into slices on one timeline shared by all tracks, so the gating stays in time with the tempo. In each slice some tracks play and some are silent; every slice keeps at least one track playing and, with two or more tracks, silences at least one.
 
-Each press draws a new gating and its feel: all sixteenths, sixteenths and eighths, or a broken mix up to quarter notes, and how often the tracks are open (40–65% of the time).
+Slices are a step, half a beat or a beat long and never cross a beat; they are shared by the tracks of the same length and clock, and every slice keeps one of them open and mutes another. Each press draws a new gating and its feel: all sixteenths, sixteenths and eighths, or a broken mix up to quarter notes, and how often the tracks are open (40–65% of the time).
 
 A silenced step plays nothing: no trig, no note, no parameter lock. A step that plays is unchanged. A note that started before a silenced step rings on through it, so note releases and delay and reverb tails are kept. A sustained track whose only trig falls on a silenced step is silent for the whole hold.
 
 Release either key and the original pattern is put back exactly; nothing is saved. Tracks with no notes, MIDI tracks and empty tracks are left alone. While the gate is on, trig keys do nothing. Break, shuffle and gate never stack. TRK alone, or before PAGE, works as before.
 
 As with the shuffle, a gated pattern is swapped in while the keys are held: a 16-step pattern repeats its gating each time round until you press again.
+
+### Meter
+
+Break, shuffle and gate work from the length each track actually plays: in one-length mode the pattern's LENGTH (not each track's stored length, which the Digitone keeps but does not play); in per-track mode each track's own length, cut short by a master length below it. The beat and bar come from that length: a loop of 16, 32 or 64 steps is 4/4 with bars of 16; a loop of 12, 24 or 36 steps is 3/4 with bars of 12, three beats of four; other lengths get the nearest even grouping. Steps past the played length are never touched.
 
 ### Compressor to bank
 
@@ -132,4 +176,4 @@ In grid recording, hold a trig and turn **NOTE** on the TRIG page. Each new pitc
 
 ## Practical limits
 
-Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer's real-instrument report was made on an earlier DigiRust build; the PAGE shortcuts (including the gate), delay-send change and note audition were verified in the emulator. See [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.
+Firmware parameter and input tests are described in [VALIDATION.md](VALIDATION.md). The developer's real-instrument report was made on an earlier DigiRust build; the PAGE shortcuts (including the gate, the meter rules, the shortcut zones and the phrase engine), delay-send change and note audition were verified in the emulator. See [VALIDATION.md](VALIDATION.md). Individual results still require listening to judge seed quality, gain and performance behavior. Neither style names nor parameter diversity prove that every seed will be musically useful or unique.
